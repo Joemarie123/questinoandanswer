@@ -11,7 +11,7 @@
         
         
         <div class="status">
-           {{ questions.length }} questions answered
+           {{ questions.length }} Questions & Answer
         </div>
       </div>
         
@@ -22,11 +22,21 @@
           :key="question.q"
           v-show="questionsAnswered === qi"
         >
+        
         <p class="my-5 mx-1"> <strong>{{ question.subject }}</strong> </p>
         <p class="mt-n4 mx-5" style="font-size:15px"> <strong>{{ question.direction }}</strong> {{ question.displaydirection }} </p>
+        <p class="jastipay mt-2 mx-2" style="font-size:14px"> {{ question.phrase_one }} </p>
+        <p class="jastipay mt-2 mx-2" style="font-size:14px"> {{ question.phrase_tow }} </p>
+        <p class="jastipay mt-2 mx-2" style="font-size:14px"> {{ question.phrase_three }} </p>
+        <p class="jastipay mt-2 mx-2" style="font-size:14px"> {{ question.phrase_four }} </p>
+        <p class="jastipay mt-2 mx-2" style="font-size:14px"> {{ question.phrase_five }} </p>
          <!--  <div class="question"> -->
-         <p class="my-5 mx-1">   {{ question.q }}</p>
-      
+        
+          <!-- 
+          <p class="my-5 mx-1"> <u> {{ question.quesionunderline }}</u> </p> -->
+         <p class="my-5 mx-1"> {{ question.number }} <u> {{ question.quesionunderline }}</u>  {{ question.q }}  </p>
+        
+
 
           <!-- </div> -->
           <div class="answers">
@@ -58,13 +68,16 @@
 
     },
 
-   /*  mounted:{
-
-    
-
-
-    } */
+   
 
 
   };
   </script>
+
+<style>
+  .jastipay {
+  text-align: justify;
+  text-justify: inter-word;
+  
+}
+</style>

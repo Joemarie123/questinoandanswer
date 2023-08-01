@@ -32,10 +32,34 @@
                density="compact" 
                variant="outlined"
               v-model="fullname"
-             label="Full Name"
+             label="Last Name"
                 
                 >
+                
+                </v-text-field>
 
+                <v-text-field
+                class="mx-2"
+                prepend-inner-icon="mdi-account"
+               density="compact" 
+               variant="outlined"
+              v-model="firstname"
+             label="First Name"
+                
+                >
+                
+                </v-text-field>
+
+                <v-text-field
+                class="mx-2"
+                prepend-inner-icon="mdi-account"
+               density="compact" 
+               variant="outlined"
+              v-model="middlename"
+             label="Middle Name"
+                
+                >
+                
                 </v-text-field>
                 
                 <v-select

@@ -38,7 +38,7 @@
       @click.prevent="reset"
       v-if="questionsAnswered === questions.length"
     >
-      PROCEED
+      PROCEED 
     </button>
 
   </div>
@@ -597,29 +597,1160 @@ export default {
 
         {
           subject:"GENERAL INFORMATION ",
-          q: 'sssssssssssssssssssssssssssssss',
+          q: '22.	Aside from the Philippines, which countries claim part of the Spratly islands in the South China Sea?',
           answers: [
             {
-              text: "aaaaaaaaaaaaaaa",
+              text: "A. China, Thailand, Brunei, Malaysia",
               is_correct: false,
             },
             {
-              text: "bbbbbbbbbbbbbbbb",
+              text: "B. China, Taiwan, Vietnam, Malaysia",
               is_correct: false,
             },
             {
-              text: "ccccccccccccccccc",
+              text: "C. Indonesia, China, Taiwan, Malaysia",
               is_correct: true,
             },
             {
-              text: "dddddddddddddddddddd",
+              text: "D. China, Thailand, Brunei, Malaysia",
               is_correct: false,
             },
           ],
         },
 
 
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '23.	The following are our constitutional rights EXCEPT to ',
+          answers: [
+            {
+              text: "A. Free access to legal assistance which shall not be denied due to poverty",
+              is_correct: false,
+            },
+            {
+              text: "B. Have access to all records of the government",
+              is_correct: false,
+            },
+            {
+              text: "C. Be presumed innocent until proven guilty",
+              is_correct: true,
+            },
+            {
+              text: "D. Form association and labor unions",
+              is_correct: false,
+            },
+          ],
+        },
 
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '24.	In which poem did Rizal write about offering one’s life for one’s country?',
+          answers: [
+            {
+              text: "A. A La Juventud Filipina",
+              is_correct: false,
+            },
+            {
+              text: "B. Mi Ultimo Adios",
+              is_correct: false,
+            },
+            {
+              text: "B. Mi Ultimo Adios",
+              is_correct: true,
+            },
+            {
+              text: "D. Florante and Laura",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '25.	How Who painted the famous artwork "The Last Supper"? ',
+          answers: [
+            {
+              text: "A. Leonardo da Vinci",
+              is_correct: false,
+            },
+            {
+              text: "B. Vincent van Gogh",
+              is_correct: false,
+            },
+            {
+              text: "C. Pablo Picasso",
+              is_correct: true,
+            },
+            {
+              text: "D. Michelangelo",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '26.	Who is known as the "Father of Modern Physics"?',
+          answers: [
+            {
+              text: "A. Isaac Newton",
+              is_correct: false,
+            },
+            {
+              text: "B. Galileo Galilei",
+              is_correct: false,
+            },
+            {
+              text: "C. Albert Einstein",
+              is_correct: true,
+            },
+            {
+              text: "D. Stephen Hawking",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '27.	Association of Southeast Asian Nations (ASEAN) aims to accelerate economic growth, stability, social progress and cultural development in the spirit of equality and partnership to strengthen prosperous and peaceful community along Southeast Asian Nations. Which of the following countries is not a member of ASEAN?',
+          answers: [
+            {
+              text: "A. Hong Kong",
+              is_correct: false,
+            },
+            {
+              text: "B. Philippines",
+              is_correct: false,
+            },
+            {
+              text: "C. Singapore",
+              is_correct: true,
+            },
+            {
+              text: "D. Thailand",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '28.	The Spanish expedition responsible for naming the archipelago Filipinas.',
+          answers: [
+            {
+              text: "A. Magellan’s expedition",
+              is_correct: false,
+            },
+            {
+              text: "B. Legaspi expedition",
+              is_correct: false,
+            },
+            {
+              text: "C. Loarca expedition",
+              is_correct: true,
+            },
+            {
+              text: "D. Villalobos expedition",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '29.	What is the largest organ in the human body?',
+          answers: [
+            {
+              text: "A. Brain",
+              is_correct: false,
+            },
+            {
+              text: "B. Veins",
+              is_correct: false,
+            },
+            {
+              text: "C. Heart",
+              is_correct: true,
+            },
+            {
+              text: "D. Skin",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '30.	What is the capital city of France?',
+          answers: [
+            {
+              text: "A. Rome",
+              is_correct: false,
+            },
+            {
+              text: "B. Paris	",
+              is_correct: false,
+            },
+            {
+              text: "C. Italy",
+              is_correct: true,
+            },
+            {
+              text: "D. London",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '31.	Who among the Presidents changed the date of our celebration of Independence Day from July 4 to June 12?',
+          answers: [
+            {
+              text: "A. Ramon Magsaysay",
+              is_correct: false,
+            },
+            {
+              text: "B. Ferdinand Marcos",
+              is_correct: false,
+            },
+            {
+              text: "C. Diosdado Macapagal",
+              is_correct: true,
+            },
+            {
+              text: "D. Gloria Macapagal- Arroyo",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '32.	The term that refers to the class of Filipinos who were free and independent',
+          answers: [
+            {
+              text: "A. Timawa",
+              is_correct: false,
+            },
+            {
+              text: "B. Aliping sagigilid",
+              is_correct: false,
+            },
+            {
+              text: "C. Maharlika",
+              is_correct: true,
+            },
+            {
+              text: "D. Mga sangre",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '33.	Which continent is home to the Amazon rainforest?',
+          answers: [
+            {
+              text: "A.	Africa",
+              is_correct: false,
+            },
+            {
+              text: "B. Europe",
+              is_correct: false,
+            },
+            {
+              text: "C. South America",
+              is_correct: true,
+            },
+            {
+              text: "D. Asia",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '34.	What is the largest mammal on Earth?',
+          answers: [
+            {
+              text: "A.	Human",
+              is_correct: false,
+            },
+            {
+              text: "B. Elephant",
+              is_correct: false,
+            },
+            {
+              text: "C. Giraffe",
+              is_correct: true,
+            },
+            {
+              text: "D. Blue Whale",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"GENERAL INFORMATION",
+          q: '35.	Section 3, Article XIV states that “All educational institutions shall include the study of ______ as part of the curriculum.”',
+          answers: [
+            {
+              text: "A. History",
+              is_correct: false,
+            },
+            {
+              text: "B. Filipino",
+              is_correct: false,
+            },
+            {
+              text: "C. Sports",
+              is_correct: true,
+            },
+            {
+              text: "D. Constitution",
+              is_correct: false,
+            },
+          ],
+        },
+
+
+        {
+          subject:"ENGLISH",
+          direction:"Direction:",
+          displaydirection:"For each sentence, complete the analogy by choosing a word from the suggested answers.",
+          q: '36.	MARATHON is to RACE as SYMPHONY is to __________.',
+          answers: [
+            {
+              text: "A. composition",
+              is_correct: false,
+            },
+            {
+              text: "B. orchestra",
+              is_correct: false,
+            },
+            {
+              text: "C. conductor",
+              is_correct: true,
+            },
+            {
+              text: "D. performance",
+              is_correct: false,
+            },
+          ],
+        },
+
+
+        {
+          subject:"ENGLISH",
+          direction:"Direction:",
+          displaydirection:"For each sentence, complete the analogy by choosing a word from the suggested answers.",
+          q: '37.	__________ is to SCHOOL as STAR is to ROCK.',
+          answers: [
+            {
+              text: "A. student",
+              is_correct: false,
+            },
+            {
+              text: "B. principal",
+              is_correct: false,
+            },
+            {
+              text: "C. fish",
+              is_correct: true,
+            },
+            {
+              text: "D. thesis",
+              is_correct: false,
+            },
+          ],
+        },
+
+
+        {
+          subject:"ENGLISH",
+          direction:"Direction:",
+          displaydirection:"For each sentence, complete the analogy by choosing a word from the suggested answers.",
+          q: '38.	RAIN is to WET as FIRE is to ______.',
+          answers: [
+            {
+              text: "A. heat",
+              is_correct: false,
+            },
+            {
+              text: "B. burn",
+              is_correct: false,
+            },
+            {
+              text: "C. smoke",
+              is_correct: true,
+            },
+            {
+              text: "D. light",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"ENGLISH",
+          direction:"Direction:",
+          displaydirection:"For each sentence, complete the analogy by choosing a word from the suggested answers.",
+          q: '39.	SCHOOL is to HOSPITAL as STORE is to __________.',
+          answers: [
+            {
+              text: "A. grocery",
+              is_correct: false,
+            },
+            {
+              text: "B. customer",
+              is_correct: false,
+            },
+            {
+              text: "C. foods",
+              is_correct: true,
+            },
+            {
+              text: "D. market",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"ENGLISH",
+          direction:"Direction:",
+          displaydirection:"For each sentence, complete the analogy by choosing a word from the suggested answers.",
+          q: '40.	CIRCLE is to SHAPE as NOVEL is to ______.',
+          answers: [
+            {
+              text: "A. book",
+              is_correct: false,
+            },
+            {
+              text: "B. novel",
+              is_correct: false,
+            },
+            {
+              text: "C. story",
+              is_correct: true,
+            },
+            {
+              text: "D. Chapter",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"ENGLISH",
+          direction:"Direction:",
+          displaydirection:"Choose the meaning of the underlined word/phares from the given choices.",
+          quesionunderline:'STRIKE',
+          number:'41.',
+          q: ' while the iron is hot.',
+          answers: [
+            {
+              text: "A. use his physical and mental power",
+              is_correct: false,
+            },
+            {
+              text: "B. make the most of every opportunity",
+              is_correct: false,
+            },
+            {
+              text: "C. solves any problems immediately",
+              is_correct: true,
+            },
+            {
+              text: "D. use his time wisely",
+              is_correct: false,
+            },
+            {
+              text: "E. work hard all the time",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"ENGLISH",
+          direction:"Direction:",
+          displaydirection:"Choose the meaning of the underlined word/phares from the given choices.",
+          quesionunderline:'CANOE.',
+          number:'42.	Paddle your own',
+          q: '',
+          answers: [
+            {
+              text: "A. Always tries his best",
+              is_correct: false,
+            },
+            {
+              text: "B. Learn from his mistakes",
+              is_correct: false,
+            },
+            {
+              text: "C. Earn his own money",
+              is_correct: true,
+            },
+            {
+              text: "D. Be self-reliant",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+        {
+          subject:"ENGLISH",
+          direction:"Direction:",
+          displaydirection:"Choose the meaning of the underlined word/phares from the given choices.",
+          quesionunderline:'FISH OUT OF WATER',
+          number:'43.	The new employee quickly became a ',
+          q: 'in the fast-paced work environment.',
+          answers: [
+            {
+              text: "A. Someone who is afraid of swimming",
+              is_correct: false,
+            },
+            {
+              text: "B. Someone who feels uncomfortable or out of place",
+              is_correct: false,
+            },
+            {
+              text: "C. Someone who enjoys aquatic activities",
+              is_correct: true,
+            },
+            {
+              text: "D. Someone who is an expert swimmer",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        {
+          subject:"ENGLISH",
+          direction:"Direction:",
+          displaydirection:"Choose the meaning of the underlined word/phares from the given choices.",
+          quesionunderline:'BLESSING IN DISGUISE',
+          number:"44.	The team's victory was a",
+          q: 'because it motivated them to work even harder for the next competition.',
+          answers: [
+            {
+              text: "A. An unexpected setback or misfortune",
+              is_correct: false,
+            },
+            {
+              text: "B. A fortunate event or outcome",
+              is_correct: false,
+            },
+            {
+              text: "C. A religious miracle",
+              is_correct: true,
+            },
+            {
+              text: "D. A hidden blessing that brings luck",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+        {
+          subject:"ENGLISH",
+          direction:"Reading Comprehension",
+          displaydirection:"“Two roads diverged in a yellow wood, And sorry I could not travel both And be one traveler, long I stood And looked down one as far as I could To where it bent in the undergrowth;”",
+          quesionunderline:'',
+          number:'',
+          q: "45.	What does this poem stanza mean?",
+          answers: [
+            {
+              text: "A. It refers to a man choosing between two roads to take when traveling.",
+              is_correct: false,
+            },
+            {
+              text: "B. It’s about the woods and the forest.",
+              is_correct: false,
+            },
+            {
+              text: "C. It talks about the different choices we have in life and how we must choose between difficult options.",
+              is_correct: true,
+            },
+            {
+              text: "D. It’s about a man who is looking for a yellow wood in the forest where he has been traveling through for so long.",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        {
+          subject:"ENGLISH",
+          direction:"Read the short story below and answer the following questions:",
+          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
+          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
+          
+          /* displaydirection:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation. As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures. Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats. One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements. The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators", */
+          quesionunderline:'',
+          number:'',
+          q: "46.	What was the goal of the team's expedition in the Amazon rainforest?",
+          answers: [
+            {
+              text: "A. To study rare bird species",
+              is_correct: false,
+            },
+            {
+              text: "B. To search for hidden treasure",
+              is_correct: false,
+            },
+            {
+              text: "C. To track and study jaguars",
+              is_correct: true,
+            },
+            {
+              text: "D. To measure rainfall patterns",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+
+        {
+          subject:"ENGLISH",
+          subject:"ENGLISH",
+          direction:"Read the short story below and answer the following questions:",
+          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
+          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
+
+          direction:"Read the short story below and answer the following questions:",
+    
+          quesionunderline:'',
+          number:'',
+          q: "47.	What challenges did the team face during the expedition?",
+          answers: [
+            {
+              text: "A. Limited food supply",
+              is_correct: false,
+            },
+            {
+              text: "B. Extreme heat and humidity",
+              is_correct: false,
+            },
+            {
+              text: "C. Hostile indigenous tribes",
+              is_correct: true,
+            },
+            {
+              text: "D. Unpredictable weather and dangerous wildlife",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+        {
+          subject:"ENGLISH",
+          subject:"ENGLISH",
+          direction:"Read the short story below and answer the following questions:",
+          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
+          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
+          direction:"Read the short story below and answer the following questions:",
+         
+          quesionunderline:'',
+          number:'',
+          q: "48.	What is Dr. Emily Reynolds' area of expertise?",
+          answers: [
+            {
+              text: "A.	Marine biology",
+              is_correct: false,
+            },
+            {
+              text: "B.	Botany and plant life",
+              is_correct: false,
+            },
+            {
+              text: "C. Big cat conservation",
+              is_correct: true,
+            },
+            {
+              text: "D. Rainforest ecology",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        
+        {
+    
+          subject:"ENGLISH",
+          direction:"Read the short story below and answer the following questions:",
+          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
+          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
+
+          direction:"Read the short story below and answer the following questions:",
+          
+          quesionunderline:'',
+          number:'',
+          q: "49.	What did the team use to capture footage of the jaguars?",
+          answers: [
+            {
+              text: "A. Drones",
+              is_correct: false,
+            },
+            {
+              text: "B. Camera traps",
+              is_correct: false,
+            },
+            {
+              text: "C. Night-vision goggles",
+              is_correct: true,
+            },
+            {
+              text: "D. Hidden observation posts",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        {
+       
+          subject:"ENGLISH",
+          direction:"Read the short story below and answer the following questions:",
+          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
+          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
+          direction:"Read the short story below and answer the following questions:",
+    
+          quesionunderline:'',
+          number:'',
+          q: "50.	How did Dr. Reynolds react when the jaguar approached the team?",
+          answers: [
+            {
+              text: "A. She ran away to safety",
+              is_correct: false,
+            },
+            {
+              text: "B. She shouted to scare the jaguar off",
+              is_correct: false,
+            },
+            {
+              text: "C. She instructed her team to remain calm",
+              is_correct: true,
+            },
+            {
+              text: "D. She tried to capture the jaguar for research purposes",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "51.	What kind of mirror is used in cars to give the driver a wider area and smaller image of the traffic behind him/her?",
+          answers: [
+            {
+              text: "A. Double concave",
+              is_correct: false,
+            },
+            {
+              text: "B. Convex",
+              is_correct: false,
+            },
+            {
+              text: "C. Plane",
+              is_correct: true,
+            },
+            {
+              text: "D. Concave",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "52.	Which of the following is a greenhouse gas?",
+          answers: [
+            {
+              text: "A. O",
+              is_correct: false,
+            },
+            {
+              text: "B. CO2",
+              is_correct: false,
+            },
+            {
+              text: "C. N",
+              is_correct: true,
+            },
+            {
+              text: "D. H",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "53.	Why do we hear thunder some seconds after seeing lightning?",
+          answers: [
+            {
+              text: "A. Because the famous Pastor lighted the Sky.",
+              is_correct: false,
+            },
+            {
+              text: "B. Light appears brighter in the sky.",
+              is_correct: false,
+            },
+            {
+              text: "C. Light travels faster than sound.",
+              is_correct: true,
+            },
+            {
+              text: "D. Sound travels 1.331 m/s.",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "54.	What is the chemical formula for table salt?",
+          answers: [
+            {
+              text: "A.	NaCl",
+              is_correct: false,
+            },
+            {
+              text: "B. H2O",
+              is_correct: false,
+            },
+            {
+              text: "C. CO2",
+              is_correct: true,
+            },
+            {
+              text: "D. KCl",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "55.	Which of the following sentences about greenhouse effect is INCORRECT?",
+          answers: [
+            {
+              text: "A. Greenhouse gasses trap heat in the atmosphere which are returned to the earth’s surface.",
+              is_correct: false,
+            },
+            {
+              text: "B. Greenhouse effect is important in maintaining the temperature of the earth.",
+              is_correct: false,
+            },
+            {
+              text: "C. Greenhouse effect is due to gases that absorb the green region of light from the sun.",
+              is_correct: true,
+            },
+            {
+              text: "D. Greenhouse effect increases the overall surface temperature of the earth.",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "56.	Acid rain occurs when _________.",
+          answers: [
+            {
+              text: "A. carbon dioxide combines with water in the atmosphere",
+              is_correct: false,
+            },
+            {
+              text: "B. phosphorus-rich water in lakes evaporates to form phosphoric acid.",
+              is_correct: false,
+            },
+            {
+              text: "C. sulfur released in burning fossil fuels combines with water in the atmosphere.",
+              is_correct: true,
+            },
+            {
+              text: "D. excess hydrogen is released into the atmosphere to produce acids.",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "57.	PAGASA announces the approach of the seasonal winds. The familiar names used are Amihan and Habagat, internationally known as ________ and ________ respectively.",
+          answers: [
+            {
+              text: "A. Northeast and southwest",
+              is_correct: false,
+            },
+            {
+              text: "B. Trade wind and easterlies",
+              is_correct: false,
+            },
+            {
+              text: "C. Southwest and northeast",
+              is_correct: true,
+            },
+            {
+              text: "D. Westerlies and easterlies",
+              is_correct: false,
+            },
+            {
+              text: "E. North and West",
+              is_correct: false,
+            },
+          ],
+        },
+
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "58.	What is the primary function of white blood cells in the human body?",
+          answers: [
+            {
+              text: "A. Carrying oxygen",
+              is_correct: false,
+            },
+            {
+              text: "B. Fighting infection",
+              is_correct: false,
+            },
+            {
+              text: "C. Transmitting nerve impulses",
+              is_correct: true,
+            },
+            {
+              text: "D. Filtering waste products",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "59.	What is the process by which a solid change directly into a gas without becoming a liquid first?",
+          answers: [
+            {
+              text: "A. Evaporation",
+              is_correct: false,
+            },
+            {
+              text: "B. Condensation",
+              is_correct: false,
+            },
+            {
+              text: "C. Sublimation",
+              is_correct: true,
+            },
+            {
+              text: "D. Freezing",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        {
+          subject:"SCIENCE",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "60.	Which of the following is a renewable resource?",
+          answers: [
+            {
+              text: "A. Wind",
+              is_correct: false,
+            },
+            {
+              text: "B. Natural Source",
+              is_correct: false,
+            },
+            {
+              text: "C. Coal",
+              is_correct: true,
+            },
+            {
+              text: "D.  Petroleum",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        {
+          subject:"BONUS QUESTIONS",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "61. What is the complete name of the current City Mayor?",
+          answers: [
+            {
+              text: "Rey T. Uy",
+              is_correct: false,
+            },
+            {
+              text: "Renadlo Uy",
+              is_correct: false,
+            },
+            {
+              text: "Renante Uy",
+              is_correct: true,
+            },
+            {
+              text: "Allan L. Rellon",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        
+        {
+          subject:"BONUS QUESTIONS",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "62. How many barangays does Tagum City consist of?",
+          answers: [
+            {
+              text: "23",
+              is_correct: false,
+            },
+            {
+              text: "22",
+              is_correct: false,
+            },
+            {
+              text: "25",
+              is_correct: true,
+            },
+            {
+              text: "21",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+        
+        {
+          subject:"BONUS QUESTIONS",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "63. What is the title of Tagum City Hymn? ",
+          answers: [
+            {
+              text: "aaaaaaaaaaaaaa",
+              is_correct: false,
+            },
+            {
+              text: "bbbbbbbbbb",
+              is_correct: false,
+            },
+            {
+              text: "ccccccccccc",
+              is_correct: true,
+            },
+            {
+              text: "dddddddddddddd",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+
+
+      
       ],
 
 
