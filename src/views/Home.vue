@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <div class="timer">
-      {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
-    </div>
-    <button @click="startCountdown" :disabled="isCountdownRunning">Start Countdown</button>
+  <div class="timer">
+    {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
   </div>
 </template>
 
@@ -16,6 +13,9 @@ export default {
       seconds: 0,
       isCountdownRunning: false,
     };
+  },
+  mounted() {
+    this.startCountdown();
   },
   methods: {
     startCountdown() {

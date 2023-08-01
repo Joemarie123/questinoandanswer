@@ -6,13 +6,16 @@
     
    <div class="text-center mt-1">
             <h5>CITY OF TAGUM</h5>
-            <h5>City Public Education and Employment Services Office</h5>
-            <h5>EXPANDED-CITY EDUCATIONAL SCHOLARSHIP PROGRAM</h5>
-            <p>Qualifying Examination</p>
+            <h5 class="responsive-text">City Public Education and Employment Services Office</h5>
+            <h5 class="responsive-text1">EXPANDED-CITY EDUCATIONAL SCHOLARSHIP PROGRAM</h5>
+            <p class="responsive-text">Qualifying Examination</p>
           </div>
           <div class="text-center mt-5">
-            <h3>SET A</h3>
            
+            <div class="timer">
+    
+     <strong>SET A - </strong> {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
+  </div>
           </div>
 
    <div class="ctr mt-5">
@@ -61,6 +64,11 @@ export default {
   },
   data() {
     return {
+      hours: 2,
+      minutes: 30,
+      seconds: 0,
+      isCountdownRunning: false,
+
       questionsAnswered: 0,
       totalCorrect: 0,
       questions: [
@@ -1729,19 +1737,19 @@ export default {
           q: "63. What is the title of Tagum City Hymn? ",
           answers: [
             {
-              text: "aaaaaaaaaaaaaa",
+              text: "TAGUMPAY",
               is_correct: false,
             },
             {
-              text: "bbbbbbbbbb",
+              text: "Tagum Tagumpay",
               is_correct: false,
             },
             {
-              text: "ccccccccccc",
+              text: "Tagum Mabuhay ka",
               is_correct: true,
             },
             {
-              text: "dddddddddddddd",
+              text: "Tagum Tagum",
               is_correct: false,
             },
            
@@ -1798,6 +1806,13 @@ export default {
       
     };
   },
+
+
+
+  mounted() {
+    this.startCountdown();
+  },
+
   methods: {
     questionAnswered(is_correct) {
       if (is_correct) {
@@ -1810,20 +1825,60 @@ export default {
       this.questionsAnswered = 0;
       this.totalCorrect = 0;
     }, */
+
+    
+    startCountdown() {
+      if (this.isCountdownRunning) return;
+      this.isCountdownRunning = true;
+
+      let totalSeconds = this.hours * 3600 + this.minutes * 60;
+
+      const countdownInterval = setInterval(() => {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          this.hours = Math.floor(totalSeconds / 3600);
+          this.minutes = Math.floor((totalSeconds % 3600) / 60);
+          this.seconds = totalSeconds % 60;
+        } else {
+          clearInterval(countdownInterval);
+          this.isCountdownRunning = false;
+        }
+      }, 1000);
+    },
+    formatTime(time) {
+      return time.toString().padStart(2, '0');
+    },
+
+
+
   },
+
+
+
 };
 </script>
 
 
 <style>
+  @media screen and (max-width: 600px) {
+    .responsive-text {
+    font-size: 13px; /* Font size for mobile devices */
+  }
+
+  .responsive-text1 {
+    font-size: 11px; /* Font size for mobile devices */
+  }
+  }
+
+
 * {
     box-sizing: border-box;
   }
   body {
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     padding-top: 20px;
-    background: #e6ecf1;
+  
   }
   
   .ctr {

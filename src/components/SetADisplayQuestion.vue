@@ -1,23 +1,26 @@
 <template>
     <div class="questions-ctr">
-      <v-card  :elevation="isHovering ? 24 : 6">
-          <p class="mx-3 my-3" style="font-size:17px"><strong>General Instruction:</strong> Write your answer on the separated ANSWER SHEET. You have 2 ½ hours to finish the test. STRICTLY NO ERASURES AND ALTERATION ALLOWED. DO NOT WRITE ANYTHING ON THIS TEST QUESTIONNAIRE. </p>
+      <v-card class="mx-3 mx-lg-0"  :elevation="isHovering ? 24 : 6">
+          <p class="mx-3 my-3 " style="font-size:17px"><strong>General Instruction:</strong> Write your answer on the separated ANSWER SHEET. You have 2 ½ hours to finish the test. STRICTLY NO ERASURES AND ALTERATION ALLOWED. DO NOT WRITE ANYTHING ON THIS TEST QUESTIONNAIRE. </p>
         </v-card>
-      <div class="progress">
+      <div class="progress mx-3 mx-lg-0">
+
         <div
           class="bar"
           :style="{ width: `${(questionsAnswered / questions.length) * 100}%` }"
         ></div>
         
+     
         
         <div class="status">
            {{ questions.length }} Questions & Answer
         </div>
       </div>
         
+      <v-card class="mx-3 mx-lg-0">
       <transition-group name="fade">
         <div
-          class="single-question"
+          class="single-question "
           v-for="(question, qi) in questions"
           :key="question.q"
           v-show="questionsAnswered === qi"
@@ -51,6 +54,8 @@
           </div>
         </div>
       </transition-group>
+    </v-card>
+
     </div>
   </template>
   
@@ -68,6 +73,8 @@
 
     },
 
+   
+  
    
 
 
