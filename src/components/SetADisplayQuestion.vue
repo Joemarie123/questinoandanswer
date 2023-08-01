@@ -8,10 +8,13 @@
           class="bar"
           :style="{ width: `${(questionsAnswered / questions.length) * 100}%` }"
         ></div>
+        
+        
         <div class="status">
-          <span style="color:Black">MATHEMATICS</span> {{ questions.length }} questions answered
+           {{ questions.length }} questions answered
         </div>
       </div>
+        
       <transition-group name="fade">
         <div
           class="single-question"
@@ -19,9 +22,12 @@
           :key="question.q"
           v-show="questionsAnswered === qi"
         >
-  
+        <p class="my-5 mx-1"> <strong>{{ question.subject }}</strong> </p>
+        <p class="mt-n4 mx-5" style="font-size:15px"> <strong>{{ question.direction }}</strong> {{ question.displaydirection }} </p>
          <!--  <div class="question"> -->
          <p class="my-5 mx-1">   {{ question.q }}</p>
+      
+
           <!-- </div> -->
           <div class="answers">
             <div
@@ -43,6 +49,9 @@
     props: ["questions", "questionsAnswered"],
     emits: ["question-answered"],
     methods: {
+      
+         
+         
       selectAnswer(is_correct) {
         this.$emit("question-answered", is_correct);
       },

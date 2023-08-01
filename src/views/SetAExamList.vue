@@ -4,7 +4,7 @@
    
    <!--  <Headerss/> -->
     
-   <div class="text-center mt-5">
+   <div class="text-center mt-1">
             <h5>CITY OF TAGUM</h5>
             <h5>City Public Education and Employment Services Office</h5>
             <h5>EXPANDED-CITY EDUCATIONAL SCHOLARSHIP PROGRAM</h5>
@@ -64,8 +64,11 @@ export default {
       questionsAnswered: 0,
       totalCorrect: 0,
       questions: [
-        
+
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: "1. If a rectangle has a length of 8 units and a width of 5 units, what is its area?",
           answers: [
             {
@@ -87,6 +90,10 @@ export default {
           ],
         },
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
+         
           q: "2.	In a sequence of numbers, each term is the sum of the previous two terms. What is this sequence called?",
           answers: [
             {
@@ -109,6 +116,10 @@ export default {
         },
 
         {
+
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '3.	A car travels at a constant speed of 60 km/h. How far will it travel in 3 hours?',
           answers: [
             {
@@ -130,6 +141,9 @@ export default {
           ],
         },
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '4.	Solve the equation: 3x2 + 5x + 2 = 0. What are the solutions for x? ',
           answers: [
             {
@@ -151,6 +165,9 @@ export default {
           ],
         },
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '5.	Find the value of x if y= 7 in the equation: 2x + 4y = 50',
           answers: [
             {
@@ -173,6 +190,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '6. If the following quantities were arranged from the least to the greatest, which one would have the second greatest value?',
           answers: [
             {
@@ -195,6 +215,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '7. The What is the value of the expression: (3! + 2! - 1!) ÷ (4! - 2! + 1!)?',
           answers: [
             {
@@ -217,6 +240,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '8. The co-operative trust fund is P500,000. Part of the fund is invested at an annual interest rate of 6% and the rest is invested at an annual interest rate of 8%. If the income from both investments is P39,000, how much is invested at each rate?',
           answers: [
             {
@@ -243,6 +269,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '9. The entrance fee in a carnival is P50 for an adult and P25 for a child. Wing Berth pays P225 for the entrance fee of his family. If his family has equal number of adults and children, how many are they in the family?',
           answers: [
             {
@@ -265,6 +294,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '10.	Nelia The sum of three consecutive odd integers is 75. What is the largest of these three integers?',
           answers: [
             {
@@ -288,6 +320,9 @@ export default {
        
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '11.	Which of these has the longest perimeter?',
           answers: [
             {
@@ -310,6 +345,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '12.	In What is the value of π (pi) approximately?',
           answers: [
             {
@@ -332,6 +370,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '13.	If a cube has a volume of 64 cubic units, what is the length of one side?',
           answers: [
             {
@@ -354,6 +395,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '14.	A factory produced 2500 TV sets in its first year of production. 4800 sets were produced in its second year and 500 more sets were produced in its third year than in its second year. How many TV sets were produced in three years?',
           answers: [
             {
@@ -376,6 +420,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '15.	Ten nurses earn a total average monthly salary of P480,000. The total average income of 6 of them amounts to P300, 000. What is the average total income of each of the remaining workers?',
           answers: [
             {
@@ -398,6 +445,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '16.	A taxi charges P50 for the first kilometer and charges P3 for each additional mile. How far could P200 go?',
           answers: [
             {
@@ -420,6 +470,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '17.	45 is 60% of what number?',
           answers: [
             {
@@ -442,6 +495,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '18.	What is 150% of 298?',
           answers: [
             {
@@ -464,6 +520,9 @@ export default {
         },
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '19.	What is the area of a circle with a diameter of 10 units?',
           answers: [
             {
@@ -487,6 +546,9 @@ export default {
 
 
         {
+          subject:"MATHEMATICS ",
+          direction:"Direction:",
+          displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
           q: '20.	An online shop sells a certain calculator for P950 and charges P150 for shipping within Manila, regardless of the number of calculators ordered. Which of the following equations shows the total cost (y) of an order as a function of the number of calculators ordered (x)?',
           answers: [
             {
@@ -503,6 +565,54 @@ export default {
             },
             {
               text: "D. y = 950x + 150",
+              is_correct: false,
+            },
+          ],
+        },
+
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: '21.	Who is credited with inventing the telephone?',
+          answers: [
+            {
+              text: "A. Alexander Graham Bell",
+              is_correct: false,
+            },
+            {
+              text: "B. Thomas Edison",
+              is_correct: false,
+            },
+            {
+              text: "C. Nikola Tesla",
+              is_correct: true,
+            },
+            {
+              text: "D. Albert Einstein",
+              is_correct: false,
+            },
+          ],
+        },
+
+
+        {
+          subject:"GENERAL INFORMATION ",
+          q: 'sssssssssssssssssssssssssssssss',
+          answers: [
+            {
+              text: "aaaaaaaaaaaaaaa",
+              is_correct: false,
+            },
+            {
+              text: "bbbbbbbbbbbbbbbb",
+              is_correct: false,
+            },
+            {
+              text: "ccccccccccccccccc",
+              is_correct: true,
+            },
+            {
+              text: "dddddddddddddddddddd",
               is_correct: false,
             },
           ],
