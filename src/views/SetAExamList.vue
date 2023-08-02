@@ -18,6 +18,8 @@
   </div>
           </div>
 
+
+
    <div class="ctr mt-5">
   
     <!-- <transition  class="mt-5" name="fade" mode="out-in"> -->
@@ -35,6 +37,8 @@
       
    <!--  </transition> -->
 
+   <div>
+    
     <button
       type="button"
       class="reset-btn"
@@ -42,8 +46,11 @@
       v-if="questionsAnswered === questions.length"
     >
       PROCEED 
-
+      <h1>{{ totalCorrect }}</h1>
     </button>
+   
+   </div>
+
 
   </div>
 </v-app>
@@ -82,11 +89,11 @@ export default {
           answers: [
             {
               text: "A. 10 sq. units",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "B. 40 sq. units",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. 20 sq. units",
@@ -107,11 +114,11 @@ export default {
           answers: [
             {
               text: "A. Fibonacci sequence",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. Arithmetic sequence",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "C. Geometric sequence",
@@ -157,7 +164,7 @@ export default {
           answers: [
             {
               text: "A. x = -1, x = -2/3",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. x = 1, x = 2/3",
@@ -165,7 +172,7 @@ export default {
             },
             {
               text: "C. x = -2, x = -1/3",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. x = 2, x = 1/3",
@@ -185,11 +192,11 @@ export default {
             },
             {
               text: "B. 11",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. 10",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 12",
@@ -235,11 +242,11 @@ export default {
             },
             {
               text: "B. 2",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. 3",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 4",
@@ -264,11 +271,11 @@ export default {
             },
             {
               text: "C. P75,000 at 6% ; P425,000 at 8%",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. P50,000 at 6% ; P450,000 at 8%",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "E. P25,000 at 6% ; P475,000 at 8%",
@@ -293,11 +300,11 @@ export default {
             },
             {
               text: "C. 8",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 6",
-              is_correct: false,
+              is_correct: true,
             },
           ],
         },
@@ -314,11 +321,11 @@ export default {
             },
             {
               text: "B. 27",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. 25",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 21",
@@ -344,11 +351,11 @@ export default {
             },
             {
               text: "C. An equilateral triangle whose side is 28 cm",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. A right triangle whose two legs are 24 and 32 cm",
-              is_correct: false,
+              is_correct: true,
             },
           ],
         },
@@ -361,7 +368,7 @@ export default {
           answers: [
             {
               text: "A. 3.14",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. 2.71",
@@ -369,7 +376,7 @@ export default {
             },
             {
               text: "C. 1.62",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 4.20",
@@ -415,11 +422,11 @@ export default {
             },
             {
               text: "B. 12,600",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. 10, 800",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 13, 800",
@@ -465,11 +472,11 @@ export default {
             },
             {
               text: "B. 51 km",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. 66. 67 km",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 4 km",
@@ -511,7 +518,7 @@ export default {
           answers: [
             {
               text: "A. 447",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. 44.7",
@@ -519,7 +526,7 @@ export default {
             },
             {
               text: "C. 4.47",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 4470",
@@ -536,7 +543,7 @@ export default {
           answers: [
             {
               text: "A. 78.5 sq. m",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. 75.8 sq. m",
@@ -544,7 +551,7 @@ export default {
             },
             {
               text: "C. 85.5 sq. m",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 87.5 sq. m",
@@ -570,11 +577,11 @@ export default {
             },
             {
               text: "C. x = 950y + 150",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. y = 950x + 150",
-              is_correct: false,
+              is_correct: true,
             },
           ],
         },
@@ -610,7 +617,7 @@ export default {
           answers: [
             {
               text: "A. China, Thailand, Brunei, Malaysia",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. China, Taiwan, Vietnam, Malaysia",
@@ -618,7 +625,7 @@ export default {
             },
             {
               text: "C. Indonesia, China, Taiwan, Malaysia",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. China, Thailand, Brunei, Malaysia",
@@ -638,11 +645,11 @@ export default {
             },
             {
               text: "B. Have access to all records of the government",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. Be presumed innocent until proven guilty",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Form association and labor unions",
@@ -661,11 +668,11 @@ export default {
             },
             {
               text: "B. Mi Ultimo Adios",
-              is_correct: false,
+              is_correct: true,
             },
             {
-              text: "B. Mi Ultimo Adios",
-              is_correct: true,
+              text: "C. Song of Maria Clara",
+              is_correct: false,
             },
             {
               text: "D. Florante and Laura",
@@ -680,7 +687,7 @@ export default {
           answers: [
             {
               text: "A. Leonardo da Vinci",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. Vincent van Gogh",
@@ -688,7 +695,7 @@ export default {
             },
             {
               text: "C. Pablo Picasso",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Michelangelo",
@@ -726,7 +733,7 @@ export default {
           answers: [
             {
               text: "A. Hong Kong",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. Philippines",
@@ -734,7 +741,7 @@ export default {
             },
             {
               text: "C. Singapore",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Thailand",
@@ -757,11 +764,11 @@ export default {
             },
             {
               text: "C. Loarca expedition",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Villalobos expedition",
-              is_correct: false,
+              is_correct: true,
             },
           ],
         },
@@ -780,11 +787,11 @@ export default {
             },
             {
               text: "C. Heart",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Skin",
-              is_correct: false,
+              is_correct: true,
             },
           ],
         },
@@ -799,11 +806,11 @@ export default {
             },
             {
               text: "B. Paris	",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. Italy",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. London",
@@ -841,7 +848,7 @@ export default {
           answers: [
             {
               text: "A. Timawa",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. Aliping sagigilid",
@@ -849,7 +856,7 @@ export default {
             },
             {
               text: "C. Maharlika",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Mga sangre",
@@ -895,11 +902,11 @@ export default {
             },
             {
               text: "C. Giraffe",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Blue Whale",
-              is_correct: false,
+              is_correct: true,
             },
           ],
         },
@@ -918,11 +925,11 @@ export default {
             },
             {
               text: "C. Sports",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Constitution",
-              is_correct: false,
+              is_correct: true,
             },
           ],
         },
@@ -944,11 +951,11 @@ export default {
             },
             {
               text: "C. conductor",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. performance",
-              is_correct: false,
+              is_correct: true,
             },
           ],
         },
@@ -962,7 +969,7 @@ export default {
           answers: [
             {
               text: "A. student",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. principal",
@@ -970,7 +977,7 @@ export default {
             },
             {
               text: "C. fish",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. thesis",
@@ -992,11 +999,11 @@ export default {
             },
             {
               text: "B. burn",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. smoke",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. light",
@@ -1017,11 +1024,11 @@ export default {
             },
             {
               text: "B. customer",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. foods",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. market",
@@ -1038,7 +1045,7 @@ export default {
           answers: [
             {
               text: "A. book",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. novel",
@@ -1046,7 +1053,7 @@ export default {
             },
             {
               text: "C. story",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Chapter",
@@ -1069,11 +1076,11 @@ export default {
             },
             {
               text: "B. make the most of every opportunity",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. solves any problems immediately",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. use his time wisely",
@@ -1104,11 +1111,11 @@ export default {
             },
             {
               text: "C. Earn his own money",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Be self-reliant",
-              is_correct: false,
+              is_correct: true,
             },
            
           ],
@@ -1128,11 +1135,11 @@ export default {
             },
             {
               text: "B. Someone who feels uncomfortable or out of place",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. Someone who enjoys aquatic activities",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Someone who is an expert swimmer",
@@ -1153,7 +1160,7 @@ export default {
           answers: [
             {
               text: "A. An unexpected setback or misfortune",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. A fortunate event or outcome",
@@ -1161,7 +1168,7 @@ export default {
             },
             {
               text: "C. A religious miracle",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. A hidden blessing that brings luck",
@@ -1262,11 +1269,11 @@ export default {
             },
             {
               text: "C. Hostile indigenous tribes",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Unpredictable weather and dangerous wildlife",
-              is_correct: false,
+              is_correct: true,
             },
            
           ],
@@ -1331,11 +1338,11 @@ export default {
             },
             {
               text: "B. Camera traps",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. Night-vision goggles",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Hidden observation posts",
@@ -1395,11 +1402,11 @@ export default {
             },
             {
               text: "B. Convex",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. Plane",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Concave",
@@ -1424,11 +1431,11 @@ export default {
             },
             {
               text: "B. CO2",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. N",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. H",
@@ -1458,11 +1465,11 @@ export default {
             },
             {
               text: "C. Light travels faster than sound.",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Sound travels 1.331 m/s.",
-              is_correct: false,
+              is_correct: true,
             },
            
           ],
@@ -1478,7 +1485,7 @@ export default {
           answers: [
             {
               text: "A.	NaCl",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. H2O",
@@ -1486,7 +1493,7 @@ export default {
             },
             {
               text: "C. CO2",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. KCl",
@@ -1514,11 +1521,11 @@ export default {
             },
             {
               text: "C. Greenhouse effect is due to gases that absorb the green region of light from the sun.",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Greenhouse effect increases the overall surface temperature of the earth.",
-              is_correct: false,
+              is_correct: true,
             },
            
           ],
@@ -1538,11 +1545,11 @@ export default {
             },
             {
               text: "B. phosphorus-rich water in lakes evaporates to form phosphoric acid.",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. sulfur released in burning fossil fuels combines with water in the atmosphere.",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. excess hydrogen is released into the atmosphere to produce acids.",
@@ -1597,11 +1604,11 @@ export default {
             },
             {
               text: "B. Fighting infection",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C. Transmitting nerve impulses",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Filtering waste products",
@@ -1650,7 +1657,7 @@ export default {
           answers: [
             {
               text: "A. Wind",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. Natural Source",
@@ -1658,7 +1665,7 @@ export default {
             },
             {
               text: "C. Coal",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D.  Petroleum",
@@ -1679,7 +1686,7 @@ export default {
           answers: [
             {
               text: "A. Rey Tan Uy",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "B. Rey Tao Uy",
@@ -1687,7 +1694,7 @@ export default {
             },
             {
               text: "C. Rey Tan Uy",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. Rey Tian Uy",
@@ -1717,11 +1724,11 @@ export default {
             },
             {
               text: "C. 19 barangays",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "D. 23 barangays",
-              is_correct: false,
+              is_correct: true,
             },
            
           ],
@@ -1808,6 +1815,7 @@ export default {
       ],
 
 
+      
      /*  questionssunod: [
         {
           qq: "21. Who is credited with inventing the telephone?",
@@ -1851,6 +1859,8 @@ export default {
 
       this.questionsAnswered++;
     },
+
+
     reset() {
       this.$router.push({ name: 'ExamName' });
       this.questionsAnswered = 0;

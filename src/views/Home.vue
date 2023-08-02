@@ -1,6 +1,10 @@
 <template>
-  <div class="timer">
-    {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
+  <div>
+    <v-select
+      v-model="selectedOption"
+      :items="options"
+      label="Select an option"
+    ></v-select>
   </div>
 </template>
 
@@ -8,44 +12,28 @@
 export default {
   data() {
     return {
-      hours: 2,
-      minutes: 30,
-      seconds: 0,
-      isCountdownRunning: false,
+      options: [],
+      selectedOption: null,
     };
   },
-  mounted() {
-    this.startCountdown();
-  },
   methods: {
-    startCountdown() {
-      if (this.isCountdownRunning) return;
-      this.isCountdownRunning = true;
-
-      let totalSeconds = this.hours * 3600 + this.minutes * 60;
-
-      const countdownInterval = setInterval(() => {
-        if (totalSeconds > 0) {
-          totalSeconds--;
-          this.hours = Math.floor(totalSeconds / 3600);
-          this.minutes = Math.floor((totalSeconds % 3600) / 60);
-          this.seconds = totalSeconds % 60;
-        } else {
-          clearInterval(countdownInterval);
-          this.isCountdownRunning = false;
-        }
-      }, 1000);
+    fetchOptions() {
+      fetch("/data.json") // Replace with the correct path to your crea.json file.
+        .then((response) => response.json())
+        .then((data) => {
+          this.options = data;
+        })
+        .catch((error) => {
+          console.error("Error fetching options:", error);
+        });
     },
-    formatTime(time) {
-      return time.toString().padStart(2, '0');
-    },
+  },
+  mounted() {
+    this.fetchOptions();
   },
 };
 </script>
 
 <style>
-.timer {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+/* Add your CSS styles here, if needed. */
 </style>
