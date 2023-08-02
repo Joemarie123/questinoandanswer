@@ -42,6 +42,7 @@
       v-if="questionsAnswered === questions.length"
     >
       PROCEED 
+
     </button>
 
   </div>
@@ -1677,19 +1678,19 @@ export default {
           q: "61. What is the complete name of the current City Mayor?",
           answers: [
             {
-              text: "Rey T. Uy",
+              text: "A. Rey Tan Uy",
               is_correct: false,
             },
             {
-              text: "Renadlo Uy",
+              text: "B. Rey Tao Uy",
               is_correct: false,
             },
             {
-              text: "Renante Uy",
+              text: "C. Rey Tan Uy",
               is_correct: true,
             },
             {
-              text: "Allan L. Rellon",
+              text: "D. Rey Tian Uy",
               is_correct: false,
             },
            
@@ -1707,19 +1708,19 @@ export default {
           q: "62. How many barangays does Tagum City consist of?",
           answers: [
             {
-              text: "23",
+              text: "A. 25 barangays",
               is_correct: false,
             },
             {
-              text: "22",
+              text: "B. 17 barangays",
               is_correct: false,
             },
             {
-              text: "25",
+              text: "C. 19 barangays",
               is_correct: true,
             },
             {
-              text: "21",
+              text: "D. 23 barangays",
               is_correct: false,
             },
            
@@ -1737,19 +1738,48 @@ export default {
           q: "63. What is the title of Tagum City Hymn? ",
           answers: [
             {
-              text: "TAGUMPAY",
+              text: "A. We are Tagum Hymn",
               is_correct: false,
             },
             {
-              text: "Tagum Tagumpay",
+              text: "B. TAGUMpay Hymn",
               is_correct: false,
             },
             {
-              text: "Tagum Mabuhay ka",
+              text: "C. Tagum, Mabuhay Ka!",
               is_correct: true,
             },
             {
-              text: "Tagum Tagum",
+              text: "D. None of these",
+              is_correct: false,
+            },
+           
+          ],
+        },
+
+          
+        {
+          subject:"BONUS QUESTIONS",
+          direction:"",
+          displaydirection:"",
+          quesionunderline:'',
+          number:'',
+          q: "64-65. What are the two (2) examples of festivals in Tagum City which started in the year 2022.",
+          answers: [
+            {
+              text: "A. Pakaradjan Festival, Banana Festival",
+              is_correct: false,
+            },
+            {
+              text: "B. Bisag Asa Festival, Pinagbenga Festival",
+              is_correct: false,
+            },
+            {
+              text: "C. Musikahan Festival, Binuhat Festival",
+              is_correct: true,
+            },
+            {
+              text: "D. Musikahan Festival, Handurawan Festival",
               is_correct: false,
             },
            
@@ -1821,10 +1851,12 @@ export default {
 
       this.questionsAnswered++;
     },
-   /*  reset() {
+    reset() {
+      this.$router.push({ name: 'ExamName' });
       this.questionsAnswered = 0;
       this.totalCorrect = 0;
-    }, */
+     
+    },
 
     
     startCountdown() {

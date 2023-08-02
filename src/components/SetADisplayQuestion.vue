@@ -1,7 +1,7 @@
 <template>
     <div class="questions-ctr">
       <v-card class="mx-3 mx-lg-0"  :elevation="isHovering ? 24 : 6">
-          <p class="mx-3 my-3 " style="font-size:17px"><strong>General Instruction:</strong> Write your answer on the separated ANSWER SHEET. You have 2 ½ hours to finish the test. STRICTLY NO ERASURES AND ALTERATION ALLOWED. DO NOT WRITE ANYTHING ON THIS TEST QUESTIONNAIRE. </p>
+          <p class="mx-3 my-3 " style="font-size:17px"><strong>Instructions:</strong> <span style="font-size:15px">Welcome to the Expanded-City Educational Scholarship Program (E-CESPRO) online examination for SY 2022-2023. Please carefully read and choose the correct answer for each item. The exam consists of 65 questions and one essay type. The time allocation for this exam is only 2 hours, plus an additional 30 minutes for your essay. Warning: Attempting to exit the exam interface or open other browser tabs will automatically exit your examination.</span></p>
         </v-card>
       <div class="progress mx-3 mx-lg-0">
 
