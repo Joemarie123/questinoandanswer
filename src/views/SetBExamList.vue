@@ -11,8 +11,9 @@
               <p>Qualifying Examination</p>
             </div>
             <div class="text-center mt-5">
-              <h3>SET B</h3>
-             
+              <div class="timer">    
+              <strong>SET B - </strong> {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
+              </div>
             </div>
   
      <div class="ctr mt-5">
@@ -61,6 +62,11 @@
     },
     data() {
       return {
+        hours: 2,
+        minutes: 30,
+        seconds: 0,
+        isCountdownRunning: false,
+      
         questionsAnswered: 0,
         totalCorrect: 0,
         questions: [
@@ -93,11 +99,11 @@
             answers: [
               {
                 text: "A. China, Thailand, Brunei, Malaysia",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. China, Taiwan, Vietnam, Malaysia",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. Indonesia, China, Taiwan, Malaysia",
@@ -116,11 +122,11 @@
             answers: [
               {
                 text: "A. Free access to legal assistance which shall not be denied due to poverty",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Have access to all records of the government",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. Be presumed innocent until proven guilty",
@@ -139,11 +145,11 @@
             answers: [
               {
                 text: "A. A La Juventud Filipina",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Mi Ultimo Adios",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. Song of Maria Clara",
@@ -158,7 +164,7 @@
 
           {
             subject:"GENERAL INFORMATION ",
-            q: "5.	How Who painted the famous artwork 'The Last Supper?'  ",
+            q: "5. Who painted the famous artwork 'The Last Supper?'  ",
             answers: [
               {
                 text: "A. Leonardo da Vinci",
@@ -185,7 +191,7 @@
             answers: [
               {
                 text: "A. Isaac Newton",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Galileo Galilei",
@@ -193,7 +199,7 @@
               },
               {
                 text: "C. Albert Einstein",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. Stephen Hawking",
@@ -232,7 +238,7 @@
             answers: [
               {
                 text: "A. Magellan’s expedition",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Legaspi expedition",
@@ -244,7 +250,7 @@
               },
               {
                 text: "D. Villalobos expedition",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -256,7 +262,7 @@
             answers: [
               {
                 text: "A. Brain",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Veins",
@@ -268,7 +274,7 @@
               },
               {
                 text: "D. Skin",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -280,11 +286,11 @@
             answers: [
               {
                 text: "A. Rome",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Paris",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. Italy",
@@ -303,7 +309,7 @@
             answers: [
               {
                 text: "A. Ramon Magsaysay",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Ferdinand Marcos",
@@ -311,7 +317,7 @@
               },
               {
                 text: "C. Diosdado Macapagal",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. Gloria Macapagal- Arroyo",
@@ -349,7 +355,7 @@
             answers: [
               {
                 text: "A.	Africa",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Europe",
@@ -357,7 +363,7 @@
               },
               {
                 text: "C. South America",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. Asia",
@@ -372,7 +378,7 @@
             answers: [
               {
                 text: "A.	Human",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Elephant",
@@ -384,7 +390,7 @@
               },
               {
                 text: "D. Blue Whale",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -396,7 +402,7 @@
             answers: [
               {
                 text: "A. History",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Filipino",
@@ -408,7 +414,7 @@
               },
               {
                 text: "D. Constitution",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -421,11 +427,11 @@
             answers: [
               {
                 text: "A. 10 sq. units",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 40 sq. units",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. 20 sq. units",
@@ -471,7 +477,7 @@
             answers: [
               {
                 text: "A. 120 km",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 180 km",
@@ -479,7 +485,7 @@
               },
               {
                 text: "C. 300 km",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. 380 km",
@@ -521,11 +527,11 @@
             answers: [
               {
                 text: "A. 8",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 11",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. 10",
@@ -546,7 +552,7 @@
             answers: [
               {
                 text: "A. 4/10",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 5/12",
@@ -554,7 +560,7 @@
               },
               {
                 text: "C. 6/12",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. ¾",
@@ -571,11 +577,11 @@
             answers: [
               {
                 text: "A. 1",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 2",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. 3",
@@ -596,7 +602,7 @@
             answers: [
               {
                 text: "A. P100,000 at 6% ; P400,000 at 8%",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. P80,000 at 6% ; P420,000 at 8%",
@@ -608,7 +614,7 @@
               },
               {
                 text: "D. P50,000 at 6% ; P450,000 at 8%",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "E. P25,000 at 6% ; P475,000 at 8%",
@@ -625,7 +631,7 @@
             answers: [
               {
                 text: "A. 12",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 10",
@@ -637,7 +643,7 @@
               },
               {
                 text: "D. 6",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -646,15 +652,15 @@
             subject:"MATHEMATICS ",
             direction:"Direction:",
           displaydirection:"Read each item carefully. CALCULATORS ARE STRICTLY PROHIBITED. You may utilize the margin or the backmost portion of this test for your computation",
-            q: "25. Nelia The sum of three consecutive odd integers is 75. What is the largest of these three integers?",
+            q: "25. The sum of three consecutive odd integers is 75. What is the largest of these three integers?",
             answers: [
               {
                 text: "A. 29",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 27",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. 25",
@@ -675,7 +681,7 @@
             answers: [
               {
                 text: "A. A square 21 cm on a side",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. A rectangle 19 cm long and 24 cm wide",
@@ -687,7 +693,7 @@
               },
               {
                 text: "D. A right triangle whose two legs are 24 and 32 cm",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -725,7 +731,7 @@
             answers: [
               {
                 text: "A. 2",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 4",
@@ -733,7 +739,7 @@
               },
               {
                 text: "C. 8",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. 6",
@@ -750,11 +756,11 @@
             answers: [
               {
                 text: "A. 11,800",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 12,600",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. 10, 800",
@@ -775,7 +781,7 @@
             answers: [
               {
                 text: "A. P80,000",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. P40,000",
@@ -783,7 +789,7 @@
               },
               {
                 text: "C. P20, 000",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. P45,000",
@@ -800,11 +806,11 @@
             answers: [
               {
                 text: "A. 50 km",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 51 km",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. 66. 67 km",
@@ -825,7 +831,7 @@
             answers: [
               {
                 text: "A. 125",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. 80",
@@ -833,7 +839,7 @@
               },
               {
                 text: "C. 75",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. 92",
@@ -900,7 +906,7 @@
             answers: [
               {
                 text: "A. y = (950 + 150) x",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. y = 150x +950",
@@ -912,7 +918,7 @@
               },
               {
                 text: "D.  y = 950x + 150",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -923,11 +929,11 @@
             answers: [
               {
                 text: "A. Double concave",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Convex ",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. Plane",
@@ -946,11 +952,11 @@
             answers: [
               {
                 text: "A. O",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. CO2",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. N",
@@ -969,7 +975,7 @@
             answers: [
               {
                 text: "A. Because the famous Pastor lighted the Sky",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Light appears brighter in the sky.",
@@ -981,7 +987,7 @@
               },
               {
                 text: "D. Sound travels 1.331 m/s",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -1015,7 +1021,7 @@
             answers: [
               {
                 text: "A. Greenhouse gasses trap heat in the atmosphere which are returned to the earth’s surface.",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Greenhouse effect is important in maintaining the temperature of the earth.",
@@ -1027,7 +1033,7 @@
               },
               {
                 text: "D.  Greenhouse effect increases the overall surface temperature of the earth.",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -1038,11 +1044,11 @@
             answers: [
               {
                 text: "A. carbon dioxide combines with water in the atmosphere.",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. phosphorus-rich water in lakes evaporates to form phosphoric acid.",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C.  sulfur released in burning fossil fuels combines with water in the atmosphere.",
@@ -1061,11 +1067,11 @@
             answers: [
               {
                 text: "A. Northeast and southwest",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Southwest and northeast",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. Trade wind and easterlies",
@@ -1088,11 +1094,11 @@
             answers: [
               {
                 text: "A. Carrying oxygen",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Fighting infection",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. Transmitting nerve impulses",
@@ -1111,7 +1117,7 @@
             answers: [
               {
                 text: "A. Evaporation",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Condensation",
@@ -1119,7 +1125,7 @@
               },
               {
                 text: "C. Sublimation",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. Freezing",
@@ -1159,7 +1165,7 @@
             answers: [
               {
                 text: "A. composition",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. orchestra",
@@ -1171,7 +1177,7 @@
               },
               {
                 text: "D.  performance",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
@@ -1207,11 +1213,11 @@
             answers: [
               {
                 text: "A. heat",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. burn",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. smoke",
@@ -1231,11 +1237,11 @@
             answers: [
               {
                 text: "A. grocery",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. customer",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. foods",
@@ -1250,7 +1256,7 @@
           {
             subject:"ENGLISH ",
             direction:"Direction:",
-          displaydirection:"For each sentence, complete the analogy by choosing a word from the suggested answers.",
+            displaydirection:"For each sentence, complete the analogy by choosing a word from the suggested answers.",
             q: "50. CIRCLE is to SHAPE as NOVEL is to ______.",
             answers: [
               {
@@ -1275,16 +1281,18 @@
           {
             subject:"ENGLISH ",
             direction:"Direction:",
-          displaydirection:"Choose the meaning of the underlined or CAPITALIZED word/phrases from the given choices.",
-            q: "51. CIRCLE is to SHAPE as NOVEL is to ______.",
+            displaydirection:"Choose the meaning of the underlined word/phrases from the given choices.",
+            underline: "STRIKE",
+            number: "51. ",
+            q: "while the iron is hot",
             answers: [
               {
                 text: "A. use his physical and mental power",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. make the most of every opportunity",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. solves any problems immediately",
@@ -1303,12 +1311,14 @@
           {
             subject:"ENGLISH ",
             direction:"Direction:",
-          displaydirection:"Choose the meaning of the underlined or CAPITALIZED word/phrases  from the given choices.",
-            q: "52. Paddle your own CANOE.",
+            displaydirection:"Choose the meaning of the underlined word/phrases  from the given choices.",
+            underline: "CANOE.",
+            number: "52. Paddle your own",
+            q: " ",
             answers: [
               {
                 text: "A. Always tries his best",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Learn from his mistakes",
@@ -1320,23 +1330,25 @@
               },
               {
                 text: "D.  Be self-reliant",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
           {
             subject:"ENGLISH ",
             direction:"Direction:",
-          displaydirection:"Choose the meaning of the underlined or CAPITALIZED word/phrases from the given choices.",
-            q: "53. The new employee quickly became a FISH OUT OF WATER in the fast-paced work environment.",
+            displaydirection:"Choose the meaning of the underlined word/phrases from the given choices.",
+            underline: "FISH OUT OF WATER",
+            number: "53. The new employee quickly became a",
+            q: "in the fast-paced work environment.",
             answers: [
               {
                 text: "A. Someone who is afraid of swimming",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Someone who feels uncomfortable or out of place",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. Someone who enjoys aquatic activities",
@@ -1351,8 +1363,10 @@
           {
             subject:"ENGLISH ",
             direction:"Direction:",
-          displaydirection:"Choose the meaning of the underlined or CAPITALIZED word/phrases from the given choices.",
-            q: "54. The team's victory was a BLESSING IN DISGUISE because it motivated them to work even harder for the next competition.",
+            displaydirection:"Choose the meaning of the underlined word/phrases from the given choices.",
+            underline: "BLESSING IN DISGUISE",
+            number: "54. The team's victory was a",
+            q: "because it motivated them to work even harder for the next competition.",
             answers: [
               {
                 text: "A. An unexpected setback or misfortune",
@@ -1377,12 +1391,16 @@
           {
             subject:"READING COMPREHENSION ",
             direction:"Poem:",
-          displaydirection:"“Two roads diverged in a yellow wood, And sorry I could not travel both And be one traveler, long I stood And looked down one as far as I could To where it bent in the undergrowth;”",
+            phrase_one: "“Two roads diverged in a yellow wood,",
+            phrase_two: "And sorry I could not travel both",
+            phrase_three: "And be one traveler, long I stood",
+            phrase_four: "And looked down one as far as I could",
+            phrase_five: "To where it bent in the undergrowth;”",
             q: "55. What does this poem stanza mean?",
             answers: [
               {
                 text: "A. It refers to a man choosing between two roads to take when traveling.",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. It’s about the woods and the forest.",
@@ -1390,7 +1408,7 @@
               },
               {
                 text: "C. It talks about the different choices we have in life and how we must choose between difficult options.",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D.  It’s about a man who is looking for a yellow wood in the forest where he has been traveling through for so long.",
@@ -1398,35 +1416,19 @@
               },
             ],
           },
-          // {
-          //   subject:"READING COMPREHENSION ",
-          //   direction:"56-60 Read the short story below and answer the following questions:",
-          // displaydirection:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          // displaydirection:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          // displaydirection:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          // displaydirection:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
-          // displaydirection:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
-          // q: "",
-          //   answers: [
-          //     {
-          //       text: "Next",
-          //       is_correct: true,
-          //     },
-          //   ],
-          // },
           {
             subject:"READING COMPREHENSION ",
             direction:"56-60 Read the short story below and answer the following questions:",
-          displaydirection:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          displaydirection:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          displaydirection:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          displaydirection:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
-          displaydirection:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
+            phrase_one: "Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+            phrase_two:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+            phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+            phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
+            phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
             q: "56. What was the goal of the team's expedition in the Amazon rainforest?",
             answers: [
               {
                 text: "A. To study rare bird species",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. To search for hidden treasure",
@@ -1434,7 +1436,7 @@
               },
               {
                 text: "C. To track and study jaguars",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. To measure rainfall patterns",
@@ -1445,16 +1447,16 @@
           {
             subject:"READING COMPREHENSION ",
             direction:"56-60 Read the short story below and answer the following questions:",
-          displaydirection:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          displaydirection:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          displaydirection:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          displaydirection:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
-          displaydirection:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
+            phrase_one: "Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+            phrase_two:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+            phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+            phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
+            phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
             q: "57. What challenges did the team face during the expedition?",
             answers: [
               {
                 text: "A. Limited food supply",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Extreme heat and humidity",
@@ -1466,23 +1468,23 @@
               },
               {
                 text: "D. Unpredictable weather and dangerous wildlife",
-                is_correct: false,
+                is_correct: true,
               },
             ],
           },
           {
             subject:"READING COMPREHENSION ",
             direction:"56-60 Read the short story below and answer the following questions:",
-          displaydirection:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          displaydirection:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          displaydirection:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          displaydirection:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
-          displaydirection:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
+            phrase_one: "Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+            phrase_two:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+            phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+            phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
+            phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
             q: "58. What is Dr. Emily Reynolds' area of expertise?",
             answers: [
               {
                 text: "A. Marine biology",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Botany and plant life",
@@ -1490,7 +1492,7 @@
               },
               {
                 text: "C. Big cat conservation",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. Rainforest ecology",
@@ -1501,20 +1503,20 @@
           {
             subject:"READING COMPREHENSION ",
             direction:"56-60 Read the short story below and answer the following questions:",
-          displaydirection:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          displaydirection:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          displaydirection:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          displaydirection:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
-          displaydirection:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
+            phrase_one: "Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+            phrase_two:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+            phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+            phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
+            phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
             q: "59. What did the team use to capture footage of the jaguars?",
             answers: [
               {
                 text: "A. Drones",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. Camera traps",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "C. Night-vision goggles",
@@ -1529,16 +1531,16 @@
           {
             subject:"READING COMPREHENSION ",
             direction:"56-60 Read the short story below and answer the following questions:",
-          displaydirection:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          displaydirection:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          displaydirection:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          displaydirection:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
-          displaydirection:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
+            phrase_one: "Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+            phrase_two:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+            phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+            phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements.",
+            phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",  
             q: "60. How did Dr. Reynolds react when the jaguar approached the team?",
             answers: [
               {
                 text: "A. She ran away to safety",
-                is_correct: true,
+                is_correct: false,
               },
               {
                 text: "B. She shouted to scare the jaguar off",
@@ -1546,7 +1548,7 @@
               },
               {
                 text: "C. She instructed her team to remain calm",
-                is_correct: false,
+                is_correct: true,
               },
               {
                 text: "D. She tried to capture the jaguar for research purposes",
@@ -1554,7 +1556,97 @@
               },
             ],
           },
-         
+
+         // Bonus Question
+          {
+            subject:"BONUS QUESTIONS ",
+            q: "61. What is the complete name of the current City Mayor?",
+            answers: [
+              {
+                text: "A. Rey Tan Uy",
+                is_correct: false,
+              },
+              {
+                text: "B. Rey Tao Uy",
+                is_correct: true,
+              },
+              {
+                text: "C. Rey Tan Uy",
+                is_correct: false,
+              },
+              {
+                text: "D. Rey Tian Uy",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            subject:"BONUS QUESTIONS ",
+            q: "62. How many barangays does Tagum City consist of?",
+            answers: [
+              {
+                text: "A. 25 barangays",
+                is_correct: false,
+              },
+              {
+                text: "B. 17 barangays",
+                is_correct: false,
+              },
+              {
+                text: "C. 19 barangays",
+                is_correct: false,
+              },
+              {
+                text: "D. 23 barangays",
+                is_correct: true,
+              },
+            ],
+          },
+          {
+            subject:"BONUS QUESTIONS ",
+            q: "63. What is the title of Tagum City Hymn?",
+            answers: [
+              {
+                text: "A. We are Tagum Hymn",
+                is_correct: false,
+              },
+              {
+                text: "B. TAGUMpay Hymn",
+                is_correct: false,
+              },
+              {
+                text: "C. Tagum, Mabuhay Ka!",
+                is_correct: true  ,
+              },
+              {
+                text: "D. None of these",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            subject:"BONUS QUESTIONS ",
+            q: "64-65 Give at least two (2) examples of festivals in Tagum City which started in the year 2022.",
+            answers: [
+              {
+                text: "A. Pakaradjan Festival, Banana Festival",
+                is_correct: false,
+              },
+              {
+                text: "B. Bisag Asa Festival, Pinagbenga Festival",
+                is_correct: false,
+              },
+              {
+                text: "C. Musikahan Festival, Binuhat Festival",
+                is_correct: true,
+              },
+              {
+                text: "D. Musikahan Festival, Handurawan Festival",
+                is_correct: false,
+              },
+            ],
+          },
+
   
         ],
         results: [
@@ -1573,6 +1665,9 @@
         ],
       };
     },
+    mounted() {
+    this.startCountdown();
+  },
     methods: {
       questionAnswered(is_correct) {
         if (is_correct) {
@@ -1581,6 +1676,30 @@
   
         this.questionsAnswered++;
       },
+
+      //countdown
+      startCountdown() {
+      if (this.isCountdownRunning) return;
+      this.isCountdownRunning = true;
+
+      let totalSeconds = this.hours * 3600 + this.minutes * 60;
+
+      const countdownInterval = setInterval(() => {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          this.hours = Math.floor(totalSeconds / 3600);
+          this.minutes = Math.floor((totalSeconds % 3600) / 60);
+          this.seconds = totalSeconds % 60;
+        } else {
+          clearInterval(countdownInterval);
+          this.isCountdownRunning = false;
+        }
+      }, 1000);
+    },
+    formatTime(time) {
+      return time.toString().padStart(2, '0');
+    },
+
       reset() {
         this.questionsAnswered = 0;
         this.totalCorrect = 0;
