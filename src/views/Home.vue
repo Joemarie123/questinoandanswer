@@ -1,10 +1,14 @@
 <template>
   <div>
-    <v-select
-      v-model="selectedOption"
-      :items="options"
-      label="Select an option"
-    ></v-select>
+    <div class="timer">
+      {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
+    </div>
+    <v-dialog  persistent v-model="isTimeUpDialogOpen" max-width="300">
+      <v-card>
+        <v-card-text class="time-up-message">Time is up! Proceed To Essay</v-card-text>
+        <v-btn color="green">OK</v-btn>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -12,28 +16,52 @@
 export default {
   data() {
     return {
-      options: [],
-      selectedOption: null,
+      hours: 0,
+      minutes: 1,
+      seconds: 0,
+      isCountdownRunning: false,
+      isTimeUp: false,
+      isTimeUpDialogOpen: false,
     };
   },
-  methods: {
-    fetchOptions() {
-      fetch("/data.json") // Replace with the correct path to your crea.json file.
-        .then((response) => response.json())
-        .then((data) => {
-          this.options = data;
-        })
-        .catch((error) => {
-          console.error("Error fetching options:", error);
-        });
-    },
-  },
   mounted() {
-    this.fetchOptions();
+    this.startCountdown();
+  },
+  methods: {
+    startCountdown() {
+      if (this.isCountdownRunning) return;
+      this.isCountdownRunning = true;
+
+      let totalSeconds = this.hours * 3600 + this.minutes * 60;
+
+      const countdownInterval = setInterval(() => {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          this.hours = Math.floor(totalSeconds / 3600);
+          this.minutes = Math.floor((totalSeconds % 3600) / 60);
+          this.seconds = totalSeconds % 60;
+        } else {
+          clearInterval(countdownInterval);
+          this.isCountdownRunning = false;
+          this.isTimeUp = true;
+          this.isTimeUpDialogOpen = true;
+        }
+      }, 1000);
+    },
+    formatTime(time) {
+      return time.toString().padStart(2, '0');
+    },
   },
 };
 </script>
 
 <style>
-/* Add your CSS styles here, if needed. */
+.timer {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.time-up-message {
+  font-weight: bold;
+}
 </style>

@@ -16,6 +16,12 @@
     
      <strong>SET A - </strong> {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
   </div>
+    <v-dialog  persistent v-model="isTimeUpDialogOpen" max-width="300">
+      <v-card>
+        <v-card-text class="time-up-message">Time is up! Please Proceed To Essay</v-card-text>
+        <v-btn    @click.prevent="reset" color="green">OK</v-btn>
+      </v-card>
+    </v-dialog>
           </div>
 
 
@@ -38,15 +44,15 @@
    <!--  </transition> -->
 
    <div>
-    
+
     <button
       type="button"
       class="reset-btn"
       @click.prevent="reset"
       v-if="questionsAnswered === questions.length"
     >
-      PROCEED 
-      <h1>{{ totalCorrect }}</h1>
+    PLEASE PROCEED TO ESSAY 
+    <!--   <h1>{{ totalCorrect }}</h1> -->
     </button>
    
    </div>
@@ -76,6 +82,9 @@ export default {
       minutes: 30,
       seconds: 0,
       isCountdownRunning: false,
+      isTimeUp: false,
+      isTimeUpDialogOpen: false,
+
 
       questionsAnswered: 0,
       totalCorrect: 0,
@@ -1884,6 +1893,8 @@ export default {
         } else {
           clearInterval(countdownInterval);
           this.isCountdownRunning = false;
+          this.isTimeUp = true;
+          this.isTimeUpDialogOpen = true;
         }
       }, 1000);
     },
@@ -2044,4 +2055,8 @@ export default {
     outline: 0;
   }
   
+  .time-up-message {
+  font-weight: bold;
+  text-align: center;
+}
 </style>

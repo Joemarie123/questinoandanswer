@@ -23,7 +23,7 @@
         v-show="questionsAnswered === qi"
       >
       <p class="my-5 mx-1"> <strong>{{ question.subject }}</strong> </p>
-      <p class="mt-n4 mx-5" style="font-size:15px; text-align: justify;"> <strong>{{ question.direction }}</strong> {{ question.displaydirection }} </p>
+      <p class="mt-n4 mx-5" style="font-size:15px;"> <strong>{{ question.direction }}</strong> {{ question.displaydirection }} </p>
       <p class="justify mt-2 mx-2" style="font-size:14px"> {{ question.phrase_one }} </p>
         <p class="justify mt-2 mx-2" style="font-size:14px"> {{ question.phrase_two }} </p>
         <p class="justify mt-2 mx-2" style="font-size:14px"> {{ question.phrase_three }} </p>
