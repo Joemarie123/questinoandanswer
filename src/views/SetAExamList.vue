@@ -51,7 +51,7 @@
       @click.prevent="reset"
       v-if="questionsAnswered === questions.length"
     >
-    PLEASE PROCEED TO ESSAY 
+  Congratulations! You've successfully completed the E-CESPRO examination. Please wait for the text or post via PEESO FB Page for those who passed the entrance examination. Thank you.
     <!--   <h1>{{ totalCorrect }}</h1> -->
     </button>
    
@@ -2036,9 +2036,9 @@ export default {
   } 
   
   .reset-btn {
-    background-color: #ff6372;
+    background-color: #56995b;
       border: 0;
-      font-size: 22px;
+      font-size: 17px;
       color: #fff;
       padding: 10px 25px;
       margin: 10px auto;

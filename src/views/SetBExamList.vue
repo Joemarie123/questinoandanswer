@@ -69,8 +69,8 @@ export default {
   },
   data() {
     return {
-      hours: 0,
-      minutes: 1,
+      hours: 2,
+      minutes: 30,
       seconds: 0,
       isCountdownRunning: false,
       isTimeUp: false,

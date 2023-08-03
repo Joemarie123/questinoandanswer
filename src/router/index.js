@@ -20,6 +20,13 @@ const routes = [
  */
 
   {
+    path: '/UserDialog',
+    name: 'UserDialog',
+    component: () => import('@/components/UserDialog.vue')
+  },
+
+
+  {
     path: '/Home',
     name: 'Home',
     component: () => import('@/views/Home.vue')
