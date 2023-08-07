@@ -4,16 +4,26 @@
    
    <!--  <Headerss/> -->
     
-   <div class="text-center mt-5">
-            <h5>CITY OF TAGUM</h5>
-            <h5>City Public Education and Employment Services Office</h5>
-            <h5>EXPANDED-CITY EDUCATIONAL SCHOLARSHIP PROGRAM</h5>
-            <p>Qualifying Examination</p>
-          </div>
-          <div class="text-center mt-5">
-            <div class="timer">    
+   <div class="begin text-center pa-12">
+      <h5>CITY OF TAGUM</h5>
+      <h5>City Public Education and Employment Services Office</h5>
+      <h5>EXPANDED-CITY EDUCATIONAL SCHOLARSHIP PROGRAM</h5>
+      <p>Qualifying Examination</p>
+    </div>
+    
+    <div class="text-center ">
+      <div class="timer">    
             <strong>SET B - </strong> {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
-            </div>
+      </div>
+    </div>
+
+
+          <div class="text-center mt-n3">
+            <!-- <div class="timer">    
+            <strong>SET B - </strong> {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
+            </div> -->
+
+            
             <v-dialog  persistent v-model="isTimeUpDialogOpen" max-width="300">
       <v-card>
         <v-card-text class="time-up-message">Time is up! Please Proceed To Essay</v-card-text>
@@ -45,7 +55,7 @@
       @click.prevent="reset"
       v-if="questionsAnswered === questions.length"
     >
-    PLEASE PROCEED TO ESSAY 
+    Congratulations! You've successfully completed the E-CESPRO examination. Please wait for the text or post via PEESO FB Page for those who passed the entrance examination. Thank you.
      <!--  <h1>{{ totalCorrect }}</h1> -->
     </button>
 
@@ -1725,139 +1735,151 @@ export default {
 
 
 <style>
+.begin {
+  /* margin: auto;
+  margin-bottom: -20px;
+  margin-top: -1px;
+  width: 60%; */
+  color: white;
+  background-color: green;
+}
+.timer{
+  color: green;
+  background-color: yellow;
+  padding: 20px;
+}
 * {
-    box-sizing: border-box;
-  }
-  body {
-    font-size: 20px;
-    font-family: sans-serif;
-    padding-top: 20px;
-    background: #e6ecf1;
-  }
-  
-  .ctr {
-    margin: 0 auto;
-    max-width: 600px;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-  }
-  .questions-ctr {
-    position: relative;
-    width: 100%;
-  }
-  .question {
-    width: 100%;
-    padding: 20px;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #00ca8c;
-    color: #fff;
-    box-sizing: border-box;
-  }
-  .single-question {
-    position: relative;
-    width: 100%;
-  }
-  .answer {
-    border: 1px solid #8e959f;
-    padding: 20px;
-    font-size: 18px;
-    width: 100%;
-    background-color: #fff;
-    transition: 0.2s linear all;
-  }
-  .answer span {
-    display: inline-block;
-    margin-left: 5px;
-    font-size: 0.75em;
-    font-style: italic;
-  }
-  .progress {
-    height: 50px;
-    margin-top: 10px;
-    background-color: #ddd;
-    position: relative;
-  }
-  .bar {
-    height: 50px;
-    background-color: #ff6372;
-    transition: all 0.3s linear;
-  }
-  .status {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    text-align: center;
-    color: #fff;
-    width: 100%;
-  }
-  .answer:not(.is-answered) {
-    cursor: pointer;
-  }
-  .answer:not(.is-answered):hover {
-    background-color: #57860a41;
-    border-color: #3e5c0f;
-    color: #fff;
-  }
-  
-  .title {
-    width: 100%;
-    padding: 20px;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #12cbc4;
-    color: #fff;
-    box-sizing: border-box;
-  }
-  .desc {
-    border: 1px solid #8e959f;
-    padding: 20px;
-    font-size: 18px;
-    width: 100%;
-    background-color: #fff;
-    transition: 0.4s linear all;
-    text-align: center;
-  }
-  .fade-enter-from {
-    opacity: 0;
-  }
-  .fade-enter-active {
-    transition: all 0.3s linear;
-  }
-  .fade-leave-active {
-    transition: all 0.3s linear;
-    opacity: 0;
-    position: absolute;
-  }
-  .fade-leave-to {
-    opacity: 0;
-  } 
-  
-  .reset-btn {
-    background-color: #ff6372;
-      border: 0;
-      font-size: 22px;
-      color: #fff;
-      padding: 10px 25px;
-      margin: 10px auto;
-      display: block;
-  }
-  
-  .result{ 
-    width: 100%;
-  }
-  
-  
-  .reset-btn:active, .reset-btn:focus, .reset-btn:hover{
-    border: 0;
-    outline: 0;
-  }
-  
-  .time-up-message {
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  font-family: sans-serif;
+  padding-top: 20px;
+  background: #e6ecf1;
+}
+
+.ctr {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.questions-ctr {
+  position: relative;
+  width: 100%;
+}
+.question { 
+  width: 100%;
+  padding: 20px;
+  font-size: 32px;
   font-weight: bold;
   text-align: center;
+  background-color: #017214;
+  color: #fff;
+  box-sizing: border-box;
+}
+.single-question {
+  position: relative;
+  width: 100%;
+  
+}
+.answer {
+  border: 1px solid #8e959f;
+  padding: 20px;
+  font-size: 15px;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.2s linear all;
+}
+.answer span {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 0.75em;
+  font-style: italic;
+}
+.progress {
+  height: 50px;
+  margin-top: 10px; 
+  background-color: #ddd;
+  size: 50%;
+  position: relative;
+}
+.bar {
+  height: 50px;
+  background-color: green;
+  transition: all 0.3s linear;
+  padding: auto;
+}
+.status {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+.answer:not(.is-answered) {
+  cursor: pointer;
+}
+.answer:not(.is-answered):hover {
+  background-color: #57860a41;
+  border-color: #3e5c0f;
+  color: #fff;
+}
+
+.title {
+  width: 100%;
+  padding: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #12cbc4;
+  color: #fff;
+  box-sizing: border-box;
+}
+.desc {
+  border: 1px solid #8e959f;
+  padding: 20px;
+  font-size: 18px;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.4s linear all;
+  text-align: center;
+}
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: all 0.3s linear;
+}
+.fade-leave-active {
+  transition: all 0.3s linear;
+  opacity: 0;
+  position: absolute;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+
+.reset-btn {
+  background-color: green;
+  border: 0;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 25px;
+  margin: 10px auto;
+  display: block;
+}
+
+.result {
+  width: 100%;
+}
+
+.reset-btn:active,
+.reset-btn:focus,
+.reset-btn:hover {
+  border: 0;
+  outline: 0;
 }
 </style>

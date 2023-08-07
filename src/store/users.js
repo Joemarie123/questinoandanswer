@@ -1,4 +1,4 @@
-/* import axios from 'axios';
+import axios from 'axios';
 
 axios.defaults.baseURL = process.env.VUE_APP_API_URL;
 
@@ -26,6 +26,7 @@ const mutations = {
 }
 
 const actions = {
+
   async fetchUsers({commit}){
     let res = await axios.get(`/users.php`);
 
@@ -39,7 +40,6 @@ const actions = {
     localStorage.setItem('auth', JSON.stringify(res.data.user[0]));
     commit('setAuth', res.data.user[0]);
   },
-
 
   async login({commit}, payload){
     let res = await axios.post('/login.php', payload);
@@ -60,4 +60,4 @@ export default {
   actions,
   getters,
   mutations
-} */
+}

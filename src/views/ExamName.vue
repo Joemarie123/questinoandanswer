@@ -31,7 +31,7 @@
                 prepend-inner-icon="mdi-account"
                density="compact" 
                variant="outlined"
-              v-model="fullname"
+              v-model="Lastname"
              label="Last Name"
                 
                 >
@@ -43,7 +43,7 @@
                 prepend-inner-icon="mdi-account"
                density="compact" 
                variant="outlined"
-              v-model="firstname"
+              v-model="Firstname"
              label="First Name"
                 
                 >
@@ -55,7 +55,7 @@
                 prepend-inner-icon="mdi-account"
                density="compact" 
                variant="outlined"
-              v-model="middlename"
+              v-model="Middlename"
              label="Middle Name"
                 
                 >
@@ -66,7 +66,7 @@
                 class="mx-2"
                 density="compact" 
                variant="outlined"
-               v-model="selectbarangay"
+               v-model="Barangay"
             :items="['Apokon', 'Bincungan', 'Busaon', 'Canocotan', 'Cuambogan', 'La Filipina', 'Liboganon', 'Madaum', 'Magdum', 'Mankilam', 'New Balamban', 'Nueva Fuerza', 'Pagsabangan', 'Pandapan', 'Magugpo Poblacion', 'San Agustin', 'San Isidro', 'San Miguel (Camp 4)', 'Visayan Village', 'Magugpo East', 'Magugpo North', 'Magugpo South', 'Magugpo West']"
              label="Select Barangay" prepend-inner-icon="mdi-map-marker"
              required></v-select>
@@ -74,25 +74,27 @@
             
                 
 
-                <v-text-field
+            <!--     <v-text-field
                 class="mx-2"
                 prepend-inner-icon="mdi-account"
                density="compact" 
                variant="outlined"
-              v-model="incomingyearlevel"
+              v-model="School_Intended"
              label="Incoming Year Level"
                 
                 >
 
                 </v-text-field>
-                
+                 -->
+
                 <v-combobox
                 prepend-inner-icon="mdi-account"
                density="compact" 
                variant="outlined"
                class="mx-2"
   label="Course Intended to Enroll"
-  :items="course"
+  v-model="Course"
+  :items="courseset"
 ></v-combobox>
 
                 <v-text-field
@@ -100,7 +102,7 @@
                 prepend-inner-icon="mdi-account"
                density="compact" 
                variant="outlined"
-              v-model="schoolintendedtoenroll"
+              v-model="School_Intended"
              label="School Intended To Enroll"
                 
                 >
@@ -109,16 +111,16 @@
                 
 <div class="ml-4">
                 <h4>SELECT TYPE OF EXAM</h4>
-                <v-radio-group  v-model="selectedSet"   inline>
+                <v-radio-group  v-model="Exam_set"   inline>
 
-  <v-radio label="SET A" value="setA"></v-radio>
-  <v-radio label="SET B"  value="setB"></v-radio>
+  <v-radio label="SET A" value="A"></v-radio>
+  <v-radio label="SET B"  value="B"></v-radio>
 
 </v-radio-group>
 </div>
                 <v-row>
                     <v-col cols="12">
-                <v-btn type="submit"  color="primary" @click="submitForm()"  class="ml-2 ">
+                <v-btn type="submit"  color="primary" @click="register()"  class="ml-2 ">
                   SUBMIT
                 </v-btn>
             </v-col>
@@ -135,16 +137,24 @@
   </template>
   
   <script>
+  import { mapActions } from 'vuex';
   export default {
     data() {
     return{
-        fullname:'',
-        selectbarangay:'',
-        incomingyearlevel:'',
-        schoolintendedtoenroll:'',
+      Lastname:'',
+        Firstname:'',
+        Middlename:'',
+        Barangay:'',
+        School_Intended:'',
+        Exam_set:'',
+        Course:'',
+        /* courseset:'', */
+
+
+
         selectedSet: '',
         alertMessage: '', // Variable to store the alert message
-        course: [
+        courseset: [
       " Bachelor of Arts in History (AB History)",
       " Bachelor of Arts in Philosophy (AB Philosophy)",
       " Bachelor of Fine Arts Major in Industrial Design (BFA)",
@@ -262,14 +272,32 @@
     }
     },
     methods: {
- 
-      submitForm() {
-      if (this.selectedSet === 'setA') {
+
+      ...mapActions('posts', ['newuser']),
+
+    register() {
+      console.log("register");
+      let data = new FormData();
+      data.append('lastname', this.Lastname);
+      data.append('firstname', this.Firstname);
+      data.append('middlename', this.Middlename);
+      data.append('barangay', this.Barangay);
+      data.append('school_intended', this.School_Intended);
+      data.append('Exam_set', this.Exam_set);
+      data.append('course', this.Course);
+      this.newuser(data).then(() => {
+         
+
+          /* this.navigateTo('/Home'); */
+         /*  this.submitForm() */
+         if (this.Exam_set === 'A') {
         // Replace 'FormA' with the name of the component or route to the form you want to transfer to for Set A
-        this.$router.push({ name: 'SetAExamList' });
-      } else if (this.selectedSet === 'setB') {
+       /*  this.$router.push({ name: 'SetAExamList' }); */
+        this.navigateTo('/SetAExamList');
+      } else if (this.Exam_set === 'B') {
         // Replace 'FormB' with the name of the component or route to the form you want to transfer to for Set B
-        this.$router.push({ name: 'SetBExamList' });
+       /*  this.$router.push({ name: 'SetBExamList' }); */
+        this.navigateTo('/SetBExamList');
       } else {
         // Handle invalid selection or show an error message
         this.alertMessage = 'Please select either SET A or SET B before submitting.';
@@ -277,7 +305,25 @@
           this.alertMessage = ''; // Clear the alert message after a few seconds
         }, 5000);
       }
+
+
+          this.Lastname = '';
+          this.Firstname = '';
+          this.Middlename = '';
+          this.Barangay = '';
+          this.School_Intended = '';
+          this.Exam_set = '';
+          this.Course= '';
+
+
+
+        }).catch(e => console.log(e.message));
     },
+    navigateTo(path) {
+      this.$router.push({ 'path': path });
+    },
+
+ 
 
 
       Login_Events()

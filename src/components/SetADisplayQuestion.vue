@@ -13,7 +13,7 @@
      
         
         <div class="status">
-           {{ questions.length }} Questions & Answer
+          {{ questionsAnswered }} out of {{ questions.length }} Questions & Answer
         </div>
       </div>
         
@@ -37,22 +37,44 @@
         
           <!-- 
           <p class="my-5 mx-1"> <u> {{ question.quesionunderline }}</u> </p> -->
-         <p class="my-5 mx-1"> {{ question.number }} <u> {{ question.quesionunderline }}</u>  {{ question.q }}  </p>
+         <p class="my-5 mx-1"> {{ question.number }} <u> {{ question.quesionunderline }}</u>  <p v-html=question.q></p>  </p>
         
 
-
           <!-- </div> -->
-          <div class="answers">
-            <div
+          <div >
+            <!-- <div
               class="answer"
-              v-for="answer in question.answers"
-              :key="answer.text"
+              v-for="answer in question.answers" :key="answer.text"
               @click.prevent="selectAnswer(answer.is_correct)"
             >
               {{ answer.text }}
-            </div>
+               
+            </div> -->
+
+            <v-radio-group v-model="answer">
+              <v-radio
+        v-for="answer in question.answers"
+        :key="answer.text"
+        :label="answer.text"
+        :value="answer"
+      ></v-radio>
+      
+            </v-radio-group>
+            <button @click="selectAnswer(answer)">SUBMIT</button>
           </div>
-        </div>
+
+
+         
+          
+        </div> 
+
+<!--         <div>
+      <p>First Choice: {{ firstChoice }}</p>
+      <p>Second Choice: {{ secondChoice }}</p>
+      <p>Third Choice: {{ thirdChoice }}</p>
+    </div> -->
+
+
       </transition-group>
     </v-card>
 
@@ -63,21 +85,49 @@
   export default {
     props: ["questions", "questionsAnswered"],
     emits: ["question-answered"],
-    methods: {
+    data(){
+        return{
+   currentQuestionIndex: 0,
+      firstChoice: '',
+      secondChoice: '',
+      thirdChoice: '',
+      answer:[]
+
+  };
+  
+},
+
+
+methods: {
       
-         
-         
-      selectAnswer(is_correct) {
-        this.$emit("question-answered", is_correct);
+
+        
+      selectAnswer(answer) {
+
+        
+        this.$emit("question-answered", answer.is_correct);
+    
+      /*   if (this.currentQuestionIndex === 0) {
+        this.firstChoice = is_correct;
+        console.log("Setting firstChoice:", is_correct);
+      } else if (this.currentQuestionIndex === 1) {
+        this.secondChoice = is_correct;
+        console.log("Setting firstChoice:", is_correct);
+      } else if (this.currentQuestionIndex === 2) {
+        this.thirdChoice = is_correct;
+        console.log("Setting firstChoice:", is_correct);
+      }
+    
+      this.currentQuestionIndex++;
+ */
       },
 
+  /*     selectChoice(answer) {
+     
+    }, */
+
     },
-
    
-  
-   
-
-
   };
   </script>
 

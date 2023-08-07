@@ -1,14 +1,23 @@
 <template>
   <div>
-    <div class="timer">
-      {{ formatTime(hours) }} : {{ formatTime(minutes) }} : {{ formatTime(seconds) }}
+    <div v-if="currentQuestionIndex < questions.length">
+      <p>{{ questions[currentQuestionIndex].question }}</p>
+      <ul>
+        <li v-for="(choice, index) in questions[currentQuestionIndex].choices" :key="index">
+          <button @click="selectChoice(choice)">{{ choice }}</button>
+        </li>
+      </ul>
     </div>
-    <v-dialog  persistent v-model="isTimeUpDialogOpen" max-width="300">
-      <v-card>
-        <v-card-text class="time-up-message">Time is up! Proceed To Essay</v-card-text>
-        <v-btn color="green">OK</v-btn>
-      </v-card>
-    </v-dialog>
+
+    <div v-else>
+      <p>End of questions.</p>
+    </div>
+
+    <div>
+      <p>First Choice: {{ firstChoice }}</p>
+      <p>Second Choice: {{ secondChoice }}</p>
+      <p>Third Choice: {{ thirdChoice }}</p>
+    </div>
   </div>
 </template>
 
@@ -16,52 +25,39 @@
 export default {
   data() {
     return {
-      hours: 0,
-      minutes: 1,
-      seconds: 0,
-      isCountdownRunning: false,
-      isTimeUp: false,
-      isTimeUpDialogOpen: false,
+      currentQuestionIndex: 0,
+      firstChoice: '',
+      secondChoice: '',
+      thirdChoice: '',
+      questions: [
+        {
+          question: 'Question 1: Choose an option',
+          choices: ['A', 'B', 'C', 'D'],
+        },
+        {
+          question: 'Question 2: Choose an option',
+          choices: ['A', 'B', 'C', 'D'],
+        },
+        {
+          question: 'Question 3: Choose an option',
+          choices: ['A', 'B', 'C', 'D'],
+        },
+      ],
     };
   },
-  mounted() {
-    this.startCountdown();
-  },
   methods: {
-    startCountdown() {
-      if (this.isCountdownRunning) return;
-      this.isCountdownRunning = true;
+    selectChoice(choice) {
+      if (this.currentQuestionIndex === 0) {
+        this.firstChoice = choice;
+      } else if (this.currentQuestionIndex === 1) {
+        this.secondChoice = choice;
+      } else if (this.currentQuestionIndex === 2) {
+        this.thirdChoice = choice;
+        // You can handle further actions or transitions here
+      }
 
-      let totalSeconds = this.hours * 3600 + this.minutes * 60;
-
-      const countdownInterval = setInterval(() => {
-        if (totalSeconds > 0) {
-          totalSeconds--;
-          this.hours = Math.floor(totalSeconds / 3600);
-          this.minutes = Math.floor((totalSeconds % 3600) / 60);
-          this.seconds = totalSeconds % 60;
-        } else {
-          clearInterval(countdownInterval);
-          this.isCountdownRunning = false;
-          this.isTimeUp = true;
-          this.isTimeUpDialogOpen = true;
-        }
-      }, 1000);
-    },
-    formatTime(time) {
-      return time.toString().padStart(2, '0');
+      this.currentQuestionIndex++;
     },
   },
 };
 </script>
-
-<style>
-.timer {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.time-up-message {
-  font-weight: bold;
-}
-</style>

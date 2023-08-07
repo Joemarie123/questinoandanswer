@@ -19,11 +19,6 @@ const routes = [
   },
  */
 
-  {
-    path: '/UserDialog',
-    name: 'UserDialog',
-    component: () => import('@/components/UserDialog.vue')
-  },
 
 
   {
