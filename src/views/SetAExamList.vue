@@ -55,7 +55,7 @@
       v-if="questionsAnswered === questions.length"
     >
   Congratulations! You've successfully completed the E-CESPRO examination. Please wait for the text or post via PEESO FB Page for those who passed the entrance examination. Thank you.
-      <h1>{{ totalCorrect }}</h1>
+      <!-- <h1>{{ totalCorrect }}</h1> -->
     </button>
    
    </div>
@@ -117,19 +117,19 @@ export default {
           q: "1. If a rectangle has a length of 8 units and a width of 5 units, what is its area?",
           answers: [
             {
-              text: "A. 10 sq. units",
+              text: "A.) 10 sq. units",
               is_correct: false,
             },
             {
-              text: "B. 40 sq. units",
+              text: "B.) 40 sq. units",
               is_correct:  true,
             },
             {
-              text: "C. 20 sq. units",
+              text: "C.) 20 sq. units",
               is_correct: false,
             },
             {
-              text: "D. 80 sq. units",
+              text: "D.) 80 sq. units",
               is_correct: false,
             },
           ],
@@ -142,19 +142,19 @@ export default {
           q: "2.	In a sequence of numbers, each term is the sum of the previous two terms. What is this sequence called?",
           answers: [
             {
-              text: "A. Fibonacci sequence",
+              text: "A.) Fibonacci sequence",
               is_correct: true,
             },
             {
-              text: "B. Arithmetic sequence",
+              text: "B.) Arithmetic sequence",
               is_correct: false,
             },
             {
-              text: "C. Geometric sequence",
+              text: "C.) Geometric sequence",
               is_correct: false,
             },
             {
-              text: "D. Harmonic sequence",
+              text: "D.) Harmonic sequence",
               is_correct: false,
             },
           ],
@@ -168,19 +168,19 @@ export default {
           q: '3.	A car travels at a constant speed of 60 km/h. How far will it travel in 3 hours?',
           answers: [
             {
-              text: "A. 120 km",
+              text: "A.) 120 km",
               is_correct: false,
             },
             {
-              text: "B. 180 km",
+              text: "B.) 180 km",
               is_correct: false,
             },
             {
-              text: "C. 300 km",
+              text: "C.) 300 km",
               is_correct: true,
             },
             {
-              text: "D. 380 km",
+              text: "D.) 380 km",
               is_correct: false,
             },
           ],
@@ -192,19 +192,19 @@ export default {
           q: '4.	Solve the equation: 3x<sup>2</sup> + 5x + 2 = 0. What are the solutions for x? ',
           answers: [
             {
-              text: "A. x = -1, x = -2/3",
+              text: "A.) x = -1, x = -2/3",
               is_correct: true,
             },
             {
-              text: "B. x = 1, x = 2/3",
+              text: "B.) x = 1, x = 2/3",
               is_correct: false,
             },
             {
-              text: "C. x = -2, x = -1/3",
+              text: "C.) x = -2, x = -1/3",
               is_correct: false,
             },
             {
-              text: "D. x = 2, x = 1/3",
+              text: "D.) x = 2, x = 1/3",
               is_correct: false,
             },
           ],
@@ -216,19 +216,19 @@ export default {
           q: '5.	Find the value of x if y= 7 in the equation: 2x + 4y = 50',
           answers: [
             {
-              text: "A. 8",
+              text: "A.) 8",
               is_correct: false,
             },
             {
-              text: "B. 11",
+              text: "B.) 11",
               is_correct: true,
             },
             {
-              text: "C. 10",
+              text: "C.) 10",
               is_correct: false,
             },
             {
-              text: "D. 12",
+              text: "D.) 12",
               is_correct: false,
             },
           ],
@@ -241,19 +241,19 @@ export default {
           q: '6. If the following quantities were arranged from the least to the greatest, which one would have the second greatest value?',
           answers: [
             {
-              text: "A. 4/10",
+              text: "A.) 4/10",
               is_correct: false,
             },
             {
-              text: "B. 5/12",
+              text: "B.) 5/12",
               is_correct: false,
             },
             {
-              text: "C. 6/12",
+              text: "C.) 6/12",
               is_correct: true,
             },
             {
-              text: "D. ¾",
+              text: "D.) ¾",
               is_correct: false,
             },
           ],
@@ -266,19 +266,19 @@ export default {
           q: '7. The What is the value of the expression: (3! + 2! - 1!) ÷ (4! - 2! + 1!)?',
           answers: [
             {
-              text: "A. 1",
+              text: "A.) 1",
               is_correct: false,
             },
             {
-              text: "B. 2",
+              text: "B.) 2",
               is_correct: true,
             },
             {
-              text: "C. 3",
+              text: "C.) 3",
               is_correct: false,
             },
             {
-              text: "D. 4",
+              text: "D.) 4",
               is_correct: false,
             },
           ],
@@ -291,23 +291,23 @@ export default {
           q: '8. The co-operative trust fund is P500,000. Part of the fund is invested at an annual interest rate of 6% and the rest is invested at an annual interest rate of 8%. If the income from both investments is P39,000, how much is invested at each rate?',
           answers: [
             {
-              text: "A. P100,000 at 6% ; P400,000 at 8%",
+              text: "A.) P100,000 at 6% ; P400,000 at 8%",
               is_correct: false,
             },
             {
-              text: "B. P80,000 at 6% ; P420,000 at 8%",
+              text: "B.) P80,000 at 6% ; P420,000 at 8%",
               is_correct: false,
             },
             {
-              text: "C. P75,000 at 6% ; P425,000 at 8%",
+              text: "C.) P75,000 at 6% ; P425,000 at 8%",
               is_correct: false,
             },
             {
-              text: "D. P50,000 at 6% ; P450,000 at 8%",
+              text: "D.) P50,000 at 6% ; P450,000 at 8%",
               is_correct: true,
             },
             {
-              text: "E. P25,000 at 6% ; P475,000 at 8%",
+              text: "E.)) P25,000 at 6% ; P475,000 at 8%",
               is_correct: false,
             },
           ],
@@ -320,19 +320,19 @@ export default {
           q: '9. The entrance fee in a carnival is P50 for an adult and P25 for a child. Wing Berth pays P225 for the entrance fee of his family. If his family has equal number of adults and children, how many are they in the family?',
           answers: [
             {
-              text: "A. 12",
+              text: "A.) 12",
               is_correct: false,
             },
             {
-              text: "B. 10",
+              text: "B.) 10",
               is_correct: false,
             },
             {
-              text: "C. 8",
+              text: "C.) 8",
               is_correct: false,
             },
             {
-              text: "D. 6",
+              text: "D.) 6",
               is_correct: true,
             },
           ],
@@ -345,19 +345,19 @@ export default {
           q: '10.	Nelia The sum of three consecutive odd integers is 75. What is the largest of these three integers?',
           answers: [
             {
-              text: "A. 29",
+              text: "A.) 29",
               is_correct: false,
             },
             {
-              text: "B. 27",
+              text: "B.) 27",
               is_correct: true,
             },
             {
-              text: "C. 25",
+              text: "C.) 25",
               is_correct: false,
             },
             {
-              text: "D. 21",
+              text: "D.) 21",
               is_correct: false,
             },
           ],
@@ -371,19 +371,19 @@ export default {
           q: '11.	Which of these has the longest perimeter?',
           answers: [
             {
-              text: "A. square 21 cm on a side",
+              text: "A.) square 21 cm on a side",
               is_correct: false,
             },
             {
-              text: "B. A rectangle 19 cm long and 24 cm wide",
+              text: "B.) A rectangle 19 cm long and 24 cm wide",
               is_correct: false,
             },
             {
-              text: "C. An equilateral triangle whose side is 28 cm",
+              text: "C.) An equilateral triangle whose side is 28 cm",
               is_correct: false,
             },
             {
-              text: "D. A right triangle whose two legs are 24 and 32 cm",
+              text: "D.) A right triangle whose two legs are 24 and 32 cm",
               is_correct: true,
             },
           ],
@@ -396,19 +396,19 @@ export default {
           q: '12.	In What is the value of π (pi) approximately?',
           answers: [
             {
-              text: "A. 3.14",
+              text: "A.) 3.14",
               is_correct: true,
             },
             {
-              text: "B. 2.71",
+              text: "B.) 2.71",
               is_correct: false,
             },
             {
-              text: "C. 1.62",
+              text: "C.) 1.62",
               is_correct: false,
             },
             {
-              text: "D. 4.20",
+              text: "D.) 4.20",
               is_correct: false,
             },
           ],
@@ -421,19 +421,19 @@ export default {
           q: '13.	If a cube has a volume of 64 cubic units, what is the length of one side?',
           answers: [
             {
-              text: "A. 2",
+              text: "A.) 2",
               is_correct: false,
             },
             {
-              text: "B. 4",
+              text: "B.) 4",
               is_correct: false,
             },
             {
-              text: "C. 8",
+              text: "C.) 8",
               is_correct: true,
             },
             {
-              text: "D. 6",
+              text: "D.) 6",
               is_correct: false,
             },
           ],
@@ -446,19 +446,19 @@ export default {
           q: '14.	A factory produced 2500 TV sets in its first year of production. 4800 sets were produced in its second year and 500 more sets were produced in its third year than in its second year. How many TV sets were produced in three years?',
           answers: [
             {
-              text: "A. 11,800",
+              text: "A.) 11,800",
               is_correct: false,
             },
             {
-              text: "B. 12,600",
+              text: "B.) 12,600",
               is_correct: true,
             },
             {
-              text: "C. 10, 800",
+              text: "C.) 10, 800",
               is_correct: false,
             },
             {
-              text: "D. 13, 800",
+              text: "D.) 13, 800",
               is_correct: false,
             },
           ],
@@ -471,19 +471,19 @@ export default {
           q: '15.	Ten nurses earn a total average monthly salary of P480,000. The total average income of 6 of them amounts to P300, 000. What is the average total income of each of the remaining workers?',
           answers: [
             {
-              text: "A. P80,000",
+              text: "A.) P80,000",
               is_correct: false,
             },
             {
-              text: "B. P40,000",
+              text: "B.) P40,000",
               is_correct: false,
             },
             {
-              text: "C. P20, 000",
+              text: "C.) P20, 000",
               is_correct: true,
             },
             {
-              text: "D. P45,000",
+              text: "D.) P45,000",
               is_correct: false,
             },
           ],
@@ -496,19 +496,19 @@ export default {
           q: '16.	A taxi charges P50 for the first kilometer and charges P3 for each additional mile. How far could P200 go?',
           answers: [
             {
-              text: "A. 50 km",
+              text: "A.) 50 km",
               is_correct: false,
             },
             {
-              text: "B. 51 km",
+              text: "B.) 51 km",
               is_correct: true,
             },
             {
-              text: "C. 66. 67 km",
+              text: "C.) 66. 67 km",
               is_correct: false,
             },
             {
-              text: "D. 4 km",
+              text: "D.) 4 km",
               is_correct: false,
             },
           ],
@@ -521,19 +521,19 @@ export default {
           q: '17.	45 is 60% of what number?',
           answers: [
             {
-              text: "A. 125",
+              text: "A.) 125",
               is_correct: false,
             },
             {
-              text: "B. 80",
+              text: "B.) 80",
               is_correct: false,
             },
             {
-              text: "C. 75",
+              text: "C.) 75",
               is_correct: true,
             },
             {
-              text: "D. 92",
+              text: "D.) 92",
               is_correct: false,
             },
           ],
@@ -546,19 +546,19 @@ export default {
           q: '18.	What is 150% of 298?',
           answers: [
             {
-              text: "A. 447",
+              text: "A.) 447",
               is_correct: true,
             },
             {
-              text: "B. 44.7",
+              text: "B.) 44.7",
               is_correct: false,
             },
             {
-              text: "C. 4.47",
+              text: "C.) 4.47",
               is_correct: false,
             },
             {
-              text: "D. 4470",
+              text: "D.) 4470",
               is_correct: false,
             },
           ],
@@ -571,19 +571,19 @@ export default {
           q: '19.	What is the area of a circle with a diameter of 10 units?',
           answers: [
             {
-              text: "A. 78.5 sq. m",
+              text: "A.) 78.5 sq. m",
               is_correct: true,
             },
             {
-              text: "B. 75.8 sq. m",
+              text: "B.) 75.8 sq. m",
               is_correct: false,
             },
             {
-              text: "C. 85.5 sq. m",
+              text: "C.) 85.5 sq. m",
               is_correct: false,
             },
             {
-              text: "D. 87.5 sq. m",
+              text: "D.) 87.5 sq. m",
               is_correct: false,
             },
           ],
@@ -597,19 +597,19 @@ export default {
           q: '20.	An online shop sells a certain calculator for P950 and charges P150 for shipping within Manila, regardless of the number of calculators ordered. Which of the following equations shows the total cost (y) of an order as a function of the number of calculators ordered (x)?',
           answers: [
             {
-              text: "A. y = (950 + 150) x",
+              text: "A.) y = (950 + 150) x",
               is_correct: false,
             },
             {
-              text: "B. y = 150x +950",
+              text: "B.) y = 150x +950",
               is_correct: false,
             },
             {
-              text: "C. x = 950y + 150",
+              text: "C.) x = 950y + 150",
               is_correct: false,
             },
             {
-              text: "D. y = 950x + 150",
+              text: "D.) y = 950x + 150",
               is_correct: true,
             },
           ],
@@ -621,19 +621,19 @@ export default {
           q: '21.	Who is credited with inventing the telephone?',
           answers: [
             {
-              text: "A. Alexander Graham Bell",
+              text: "A.) Alexander Graham Bell",
               is_correct: false,
             },
             {
-              text: "B. Thomas Edison",
+              text: "B.) Thomas Edison",
               is_correct: false,
             },
             {
-              text: "C. Nikola Tesla",
+              text: "C.) Nikola Tesla",
               is_correct: true,
             },
             {
-              text: "D. Albert Einstein",
+              text: "D.) Albert Einstein",
               is_correct: false,
             },
           ],
@@ -645,19 +645,19 @@ export default {
           q: '22.	Aside from the Philippines, which countries claim part of the Spratly islands in the South China Sea?',
           answers: [
             {
-              text: "A. China, Thailand, Brunei, Malaysia",
+              text: "A.) China, Thailand, Brunei, Malaysia",
               is_correct: true,
             },
             {
-              text: "B. China, Taiwan, Vietnam, Malaysia",
+              text: "B.) China, Taiwan, Vietnam, Malaysia",
               is_correct: false,
             },
             {
-              text: "C. Indonesia, China, Taiwan, Malaysia",
+              text: "C.) Indonesia, China, Taiwan, Malaysia",
               is_correct: false,
             },
             {
-              text: "D. China, Thailand, Brunei, Malaysia",
+              text: "D.) China, Thailand, Brunei, Malaysia",
               is_correct: false,
             },
           ],
@@ -669,19 +669,19 @@ export default {
           q: '23.	The following are our constitutional rights EXCEPT to ',
           answers: [
             {
-              text: "A. Free access to legal assistance which shall not be denied due to poverty",
+              text: "A.) Free access to legal assistance which shall not be denied due to poverty",
               is_correct: false,
             },
             {
-              text: "B. Have access to all records of the government",
+              text: "B.) Have access to all records of the government",
               is_correct: true,
             },
             {
-              text: "C. Be presumed innocent until proven guilty",
+              text: "C.) Be presumed innocent until proven guilty",
               is_correct: false,
             },
             {
-              text: "D. Form association and labor unions",
+              text: "D.) Form association and labor unions",
               is_correct: false,
             },
           ],
@@ -692,19 +692,19 @@ export default {
           q: '24.	In which poem did Rizal write about offering one’s life for one’s country?',
           answers: [
             {
-              text: "A. A La Juventud Filipina",
+              text: "A.) A La Juventud Filipina",
               is_correct: false,
             },
             {
-              text: "B. Mi Ultimo Adios",
+              text: "B.) Mi Ultimo Adios",
               is_correct: true,
             },
             {
-              text: "C. Song of Maria Clara",
+              text: "C.) Song of Maria Clara",
               is_correct: false,
             },
             {
-              text: "D. Florante and Laura",
+              text: "D.) Florante and Laura",
               is_correct: false,
             },
           ],
@@ -715,19 +715,19 @@ export default {
           q: '25.	How Who painted the famous artwork "The Last Supper"? ',
           answers: [
             {
-              text: "A. Leonardo da Vinci",
+              text: "A.) Leonardo da Vinci",
               is_correct: true,
             },
             {
-              text: "B. Vincent van Gogh",
+              text: "B.) Vincent van Gogh",
               is_correct: false,
             },
             {
-              text: "C. Pablo Picasso",
+              text: "C.) Pablo Picasso",
               is_correct: false,
             },
             {
-              text: "D. Michelangelo",
+              text: "D.) Michelangelo",
               is_correct: false,
             },
           ],
@@ -738,19 +738,19 @@ export default {
           q: '26.	Who is known as the "Father of Modern Physics"?',
           answers: [
             {
-              text: "A. Isaac Newton",
+              text: "A.) Isaac Newton",
               is_correct: false,
             },
             {
-              text: "B. Galileo Galilei",
+              text: "B.) Galileo Galilei",
               is_correct: false,
             },
             {
-              text: "C. Albert Einstein",
+              text: "C.) Albert Einstein",
               is_correct: true,
             },
             {
-              text: "D. Stephen Hawking",
+              text: "D.) Stephen Hawking",
               is_correct: false,
             },
           ],
@@ -761,19 +761,19 @@ export default {
           q: '27.	Association of Southeast Asian Nations (ASEAN) aims to accelerate economic growth, stability, social progress and cultural development in the spirit of equality and partnership to strengthen prosperous and peaceful community along Southeast Asian Nations. Which of the following countries is not a member of ASEAN?',
           answers: [
             {
-              text: "A. Hong Kong",
+              text: "A.) Hong Kong",
               is_correct: true,
             },
             {
-              text: "B. Philippines",
+              text: "B.) Philippines",
               is_correct: false,
             },
             {
-              text: "C. Singapore",
+              text: "C.) Singapore",
               is_correct: false,
             },
             {
-              text: "D. Thailand",
+              text: "D.) Thailand",
               is_correct: false,
             },
           ],
@@ -784,19 +784,19 @@ export default {
           q: '28.	The Spanish expedition responsible for naming the archipelago Filipinas.',
           answers: [
             {
-              text: "A. Magellan’s expedition",
+              text: "A.) Magellan’s expedition",
               is_correct: false,
             },
             {
-              text: "B. Legaspi expedition",
+              text: "B.) Legaspi expedition",
               is_correct: false,
             },
             {
-              text: "C. Loarca expedition",
+              text: "C.) Loarca expedition",
               is_correct: false,
             },
             {
-              text: "D. Villalobos expedition",
+              text: "D.) Villalobos expedition",
               is_correct: true,
             },
           ],
@@ -807,19 +807,19 @@ export default {
           q: '29.	What is the largest organ in the human body?',
           answers: [
             {
-              text: "A. Brain",
+              text: "A.) Brain",
               is_correct: false,
             },
             {
-              text: "B. Veins",
+              text: "B.) Veins",
               is_correct: false,
             },
             {
-              text: "C. Heart",
+              text: "C.) Heart",
               is_correct: false,
             },
             {
-              text: "D. Skin",
+              text: "D.) Skin",
               is_correct: true,
             },
           ],
@@ -830,19 +830,19 @@ export default {
           q: '30.	What is the capital city of France?',
           answers: [
             {
-              text: "A. Rome",
+              text: "A.) Rome",
               is_correct: false,
             },
             {
-              text: "B. Paris	",
+              text: "B.) Paris	",
               is_correct: true,
             },
             {
-              text: "C. Italy",
+              text: "C.) Italy",
               is_correct: false,
             },
             {
-              text: "D. London",
+              text: "D.) London",
               is_correct: false,
             },
           ],
@@ -853,19 +853,19 @@ export default {
           q: '31.	Who among the Presidents changed the date of our celebration of Independence Day from July 4 to June 12?',
           answers: [
             {
-              text: "A. Ramon Magsaysay",
+              text: "A.) Ramon Magsaysay",
               is_correct: false,
             },
             {
-              text: "B. Ferdinand Marcos",
+              text: "B.) Ferdinand Marcos",
               is_correct: false,
             },
             {
-              text: "C. Diosdado Macapagal",
+              text: "C.) Diosdado Macapagal",
               is_correct: true,
             },
             {
-              text: "D. Gloria Macapagal- Arroyo",
+              text: "D.) Gloria Macapagal- Arroyo",
               is_correct: false,
             },
           ],
@@ -876,19 +876,19 @@ export default {
           q: '32.	The term that refers to the class of Filipinos who were free and independent',
           answers: [
             {
-              text: "A. Timawa",
+              text: "A.) Timawa",
               is_correct: true,
             },
             {
-              text: "B. Aliping sagigilid",
+              text: "B.) Aliping sagigilid",
               is_correct: false,
             },
             {
-              text: "C. Maharlika",
+              text: "C.) Maharlika",
               is_correct: false,
             },
             {
-              text: "D. Mga sangre",
+              text: "D.) Mga sangre",
               is_correct: false,
             },
           ],
@@ -899,19 +899,19 @@ export default {
           q: '33.	Which continent is home to the Amazon rainforest?',
           answers: [
             {
-              text: "A.	Africa",
+              text: "A.)	Africa",
               is_correct: false,
             },
             {
-              text: "B. Europe",
+              text: "B.) Europe",
               is_correct: false,
             },
             {
-              text: "C. South America",
+              text: "C.) South America",
               is_correct: true,
             },
             {
-              text: "D. Asia",
+              text: "D.) Asia",
               is_correct: false,
             },
           ],
@@ -922,19 +922,19 @@ export default {
           q: '34.	What is the largest mammal on Earth?',
           answers: [
             {
-              text: "A.	Human",
+              text: "A.)	Human",
               is_correct: false,
             },
             {
-              text: "B. Elephant",
+              text: "B.) Elephant",
               is_correct: false,
             },
             {
-              text: "C. Giraffe",
+              text: "C.) Giraffe",
               is_correct: false,
             },
             {
-              text: "D. Blue Whale",
+              text: "D.) Blue Whale",
               is_correct: true,
             },
           ],
@@ -945,19 +945,19 @@ export default {
           q: '35.	Section 3, Article XIV states that “All educational institutions shall include the study of ______ as part of the curriculum.”',
           answers: [
             {
-              text: "A. History",
+              text: "A.) History",
               is_correct: false,
             },
             {
-              text: "B. Filipino",
+              text: "B.) Filipino",
               is_correct: false,
             },
             {
-              text: "C. Sports",
+              text: "C.) Sports",
               is_correct: false,
             },
             {
-              text: "D. Constitution",
+              text: "D.) Constitution",
               is_correct: true,
             },
           ],
@@ -971,19 +971,19 @@ export default {
           q: '36.	MARATHON is to RACE as SYMPHONY is to __________.',
           answers: [
             {
-              text: "A. composition",
+              text: "A.) composition",
               is_correct: false,
             },
             {
-              text: "B. orchestra",
+              text: "B.) orchestra",
               is_correct: false,
             },
             {
-              text: "C. conductor",
+              text: "C.) conductor",
               is_correct: false,
             },
             {
-              text: "D. performance",
+              text: "D.) performance",
               is_correct: true,
             },
           ],
@@ -997,19 +997,19 @@ export default {
           q: '37.	__________ is to SCHOOL as STAR is to ROCK.',
           answers: [
             {
-              text: "A. student",
+              text: "A.) student",
               is_correct: true,
             },
             {
-              text: "B. principal",
+              text: "B.) principal",
               is_correct: false,
             },
             {
-              text: "C. fish",
+              text: "C.) fish",
               is_correct: false,
             },
             {
-              text: "D. thesis",
+              text: "D.) thesis",
               is_correct: false,
             },
           ],
@@ -1023,19 +1023,19 @@ export default {
           q: '38.	RAIN is to WET as FIRE is to ______.',
           answers: [
             {
-              text: "A. heat",
+              text: "A.) heat",
               is_correct: false,
             },
             {
-              text: "B. burn",
+              text: "B.) burn",
               is_correct: true,
             },
             {
-              text: "C. smoke",
+              text: "C.) smoke",
               is_correct: false,
             },
             {
-              text: "D. light",
+              text: "D.) light",
               is_correct: false,
             },
           ],
@@ -1048,19 +1048,19 @@ export default {
           q: '39.	SCHOOL is to HOSPITAL as STORE is to __________.',
           answers: [
             {
-              text: "A. grocery",
+              text: "A.) grocery",
               is_correct: false,
             },
             {
-              text: "B. customer",
+              text: "B.) customer",
               is_correct: true,
             },
             {
-              text: "C. foods",
+              text: "C.) foods",
               is_correct: false,
             },
             {
-              text: "D. market",
+              text: "D.) market",
               is_correct: false,
             },
           ],
@@ -1073,19 +1073,19 @@ export default {
           q: '40.	CIRCLE is to SHAPE as NOVEL is to ______.',
           answers: [
             {
-              text: "A. book",
+              text: "A.) book",
               is_correct: true,
             },
             {
-              text: "B. novel",
+              text: "B.) novel",
               is_correct: false,
             },
             {
-              text: "C. story",
+              text: "C.) story",
               is_correct: false,
             },
             {
-              text: "D. Chapter",
+              text: "D.) Chapter",
               is_correct: false,
             },
           ],
@@ -1100,23 +1100,23 @@ export default {
           q: ' while the iron is hot.',
           answers: [
             {
-              text: "A. use his physical and mental power",
+              text: "A.) use his physical and mental power",
               is_correct: false,
             },
             {
-              text: "B. make the most of every opportunity",
+              text: "B.) make the most of every opportunity",
               is_correct: true,
             },
             {
-              text: "C. solves any problems immediately",
+              text: "C.) solves any problems immediately",
               is_correct: false,
             },
             {
-              text: "D. use his time wisely",
+              text: "D.) use his time wisely",
               is_correct: false,
             },
             {
-              text: "E. work hard all the time",
+              text: "E.) work hard all the time",
               is_correct: false,
             },
           ],
@@ -1131,19 +1131,19 @@ export default {
           q: '',
           answers: [
             {
-              text: "A. Always tries his best",
+              text: "A.) Always tries his best",
               is_correct: false,
             },
             {
-              text: "B. Learn from his mistakes",
+              text: "B.) Learn from his mistakes",
               is_correct: false,
             },
             {
-              text: "C. Earn his own money",
+              text: "C.) Earn his own money",
               is_correct: false,
             },
             {
-              text: "D. Be self-reliant",
+              text: "D.) Be self-reliant",
               is_correct: true,
             },
            
@@ -1159,19 +1159,19 @@ export default {
           q: 'in the fast-paced work environment.',
           answers: [
             {
-              text: "A. Someone who is afraid of swimming",
+              text: "A.) Someone who is afraid of swimming",
               is_correct: false,
             },
             {
-              text: "B. Someone who feels uncomfortable or out of place",
+              text: "B.) Someone who feels uncomfortable or out of place",
               is_correct: true,
             },
             {
-              text: "C. Someone who enjoys aquatic activities",
+              text: "C.) Someone who enjoys aquatic activities",
               is_correct: false,
             },
             {
-              text: "D. Someone who is an expert swimmer",
+              text: "D.) Someone who is an expert swimmer",
               is_correct: false,
             },
            
@@ -1188,19 +1188,19 @@ export default {
           q: 'because it motivated them to work even harder for the next competition.',
           answers: [
             {
-              text: "A. An unexpected setback or misfortune",
+              text: "A.) An unexpected setback or misfortune",
               is_correct: true,
             },
             {
-              text: "B. A fortunate event or outcome",
+              text: "B.) A fortunate event or outcome",
               is_correct: false,
             },
             {
-              text: "C. A religious miracle",
+              text: "C.) A religious miracle",
               is_correct: false,
             },
             {
-              text: "D. A hidden blessing that brings luck",
+              text: "D.) A hidden blessing that brings luck",
               is_correct: false,
             },
            
@@ -1216,19 +1216,19 @@ export default {
           q: "45.	What does this poem stanza mean?",
           answers: [
             {
-              text: "A. It refers to a man choosing between two roads to take when traveling.",
+              text: "A.) It refers to a man choosing between two roads to take when traveling.",
               is_correct: false,
             },
             {
-              text: "B. It’s about the woods and the forest.",
+              text: "B.) It’s about the woods and the forest.",
               is_correct: false,
             },
             {
-              text: "C. It talks about the different choices we have in life and how we must choose between difficult options.",
+              text: "C.) It talks about the different choices we have in life and how we must choose between difficult options.",
               is_correct: true,
             },
             {
-              text: "D. It’s about a man who is looking for a yellow wood in the forest where he has been traveling through for so long.",
+              text: "D.) It’s about a man who is looking for a yellow wood in the forest where he has been traveling through for so long.",
               is_correct: false,
             },
            
@@ -1251,19 +1251,19 @@ export default {
           q: "46.	What was the goal of the team's expedition in the Amazon rainforest?",
           answers: [
             {
-              text: "A. To study rare bird species",
+              text: "A.) To study rare bird species",
               is_correct: false,
             },
             {
-              text: "B. To search for hidden treasure",
+              text: "B.) To search for hidden treasure",
               is_correct: false,
             },
             {
-              text: "C. To track and study jaguars",
+              text: "C.) To track and study jaguars",
               is_correct: true,
             },
             {
-              text: "D. To measure rainfall patterns",
+              text: "D.) To measure rainfall patterns",
               is_correct: false,
             },
            
@@ -1289,19 +1289,19 @@ export default {
           q: "47.	What challenges did the team face during the expedition?",
           answers: [
             {
-              text: "A. Limited food supply",
+              text: "A.) Limited food supply",
               is_correct: false,
             },
             {
-              text: "B. Extreme heat and humidity",
+              text: "B.) Extreme heat and humidity",
               is_correct: false,
             },
             {
-              text: "C. Hostile indigenous tribes",
+              text: "C.) Hostile indigenous tribes",
               is_correct: false,
             },
             {
-              text: "D. Unpredictable weather and dangerous wildlife",
+              text: "D.) Unpredictable weather and dangerous wildlife",
               is_correct: true,
             },
            
@@ -1324,19 +1324,19 @@ export default {
           q: "48.	What is Dr. Emily Reynolds' area of expertise?",
           answers: [
             {
-              text: "A.	Marine biology",
+              text: "A.)	Marine biology",
               is_correct: false,
             },
             {
-              text: "B.	Botany and plant life",
+              text: "B.)	Botany and plant life",
               is_correct: false,
             },
             {
-              text: "C. Big cat conservation",
+              text: "C.) Big cat conservation",
               is_correct: true,
             },
             {
-              text: "D. Rainforest ecology",
+              text: "D.) Rainforest ecology",
               is_correct: false,
             },
            
@@ -1362,19 +1362,19 @@ export default {
           q: "49.	What did the team use to capture footage of the jaguars?",
           answers: [
             {
-              text: "A. Drones",
+              text: "A.) Drones",
               is_correct: false,
             },
             {
-              text: "B. Camera traps",
+              text: "B.) Camera traps",
               is_correct: true,
             },
             {
-              text: "C. Night-vision goggles",
+              text: "C.) Night-vision goggles",
               is_correct: false,
             },
             {
-              text: "D. Hidden observation posts",
+              text: "D.) Hidden observation posts",
               is_correct: false,
             },
            
@@ -1398,19 +1398,19 @@ export default {
           q: "50.	How did Dr. Reynolds react when the jaguar approached the team?",
           answers: [
             {
-              text: "A. She ran away to safety",
+              text: "A.) She ran away to safety",
               is_correct: false,
             },
             {
-              text: "B. She shouted to scare the jaguar off",
+              text: "B.) She shouted to scare the jaguar off",
               is_correct: false,
             },
             {
-              text: "C. She instructed her team to remain calm",
+              text: "C.) She instructed her team to remain calm",
               is_correct: true,
             },
             {
-              text: "D. She tried to capture the jaguar for research purposes",
+              text: "D.) She tried to capture the jaguar for research purposes",
               is_correct: false,
             },
            
@@ -1426,19 +1426,19 @@ export default {
           q: "51.	What kind of mirror is used in cars to give the driver a wider area and smaller image of the traffic behind him/her?",
           answers: [
             {
-              text: "A. Double concave",
+              text: "A.) Double concave",
               is_correct: false,
             },
             {
-              text: "B. Convex",
+              text: "B.) Convex",
               is_correct: true,
             },
             {
-              text: "C. Plane",
+              text: "C.) Plane",
               is_correct: false,
             },
             {
-              text: "D. Concave",
+              text: "D.) Concave",
               is_correct: false,
             },
            
@@ -1455,19 +1455,19 @@ export default {
           q: "52.	Which of the following is a greenhouse gas?",
           answers: [
             {
-              text: "A. O",
+              text: "A.) O",
               is_correct: false,
             },
             {
-              text: "B. CO2",
+              text: "B.) CO2",
               is_correct: true,
             },
             {
-              text: "C. N",
+              text: "C.) N",
               is_correct: false,
             },
             {
-              text: "D. H",
+              text: "D.) H",
               is_correct: false,
             },
            
@@ -1485,19 +1485,19 @@ export default {
           q: "53.	Why do we hear thunder some seconds after seeing lightning?",
           answers: [
             {
-              text: "A. Because the famous Pastor lighted the Sky.",
+              text: "A.) Because the famous Pastor lighted the Sky.",
               is_correct: false,
             },
             {
-              text: "B. Light appears brighter in the sky.",
+              text: "B.) Light appears brighter in the sky.",
               is_correct: false,
             },
             {
-              text: "C. Light travels faster than sound.",
+              text: "C.) Light travels faster than sound.",
               is_correct: false,
             },
             {
-              text: "D. Sound travels 1.331 m/s.",
+              text: "D.) Sound travels 1.331 m/s.",
               is_correct: true,
             },
            
@@ -1513,19 +1513,19 @@ export default {
           q: "54.	What is the chemical formula for table salt?",
           answers: [
             {
-              text: "A.	NaCl",
+              text: "A.)	NaCl",
               is_correct: true,
             },
             {
-              text: "B. H2O",
+              text: "B.) H2O",
               is_correct: false,
             },
             {
-              text: "C. CO2",
+              text: "C.) CO2",
               is_correct: false,
             },
             {
-              text: "D. KCl",
+              text: "D.) KCl",
               is_correct: false,
             },
            
@@ -1541,19 +1541,19 @@ export default {
           q: "55.	Which of the following sentences about greenhouse effect is INCORRECT?",
           answers: [
             {
-              text: "A. Greenhouse gasses trap heat in the atmosphere which are returned to the earth’s surface.",
+              text: "A.) Greenhouse gasses trap heat in the atmosphere which are returned to the earth’s surface.",
               is_correct: false,
             },
             {
-              text: "B. Greenhouse effect is important in maintaining the temperature of the earth.",
+              text: "B.) Greenhouse effect is important in maintaining the temperature of the earth.",
               is_correct: false,
             },
             {
-              text: "C. Greenhouse effect is due to gases that absorb the green region of light from the sun.",
+              text: "C.) Greenhouse effect is due to gases that absorb the green region of light from the sun.",
               is_correct: false,
             },
             {
-              text: "D. Greenhouse effect increases the overall surface temperature of the earth.",
+              text: "D.) Greenhouse effect increases the overall surface temperature of the earth.",
               is_correct: true,
             },
            
@@ -1569,19 +1569,19 @@ export default {
           q: "56.	Acid rain occurs when _________.",
           answers: [
             {
-              text: "A. carbon dioxide combines with water in the atmosphere",
+              text: "A.) carbon dioxide combines with water in the atmosphere",
               is_correct: false,
             },
             {
-              text: "B. phosphorus-rich water in lakes evaporates to form phosphoric acid.",
+              text: "B.) phosphorus-rich water in lakes evaporates to form phosphoric acid.",
               is_correct: true,
             },
             {
-              text: "C. sulfur released in burning fossil fuels combines with water in the atmosphere.",
+              text: "C.) sulfur released in burning fossil fuels combines with water in the atmosphere.",
               is_correct: false,
             },
             {
-              text: "D. excess hydrogen is released into the atmosphere to produce acids.",
+              text: "D.) excess hydrogen is released into the atmosphere to produce acids.",
               is_correct: false,
             },
            
@@ -1597,23 +1597,23 @@ export default {
           q: "57.	PAGASA announces the approach of the seasonal winds. The familiar names used are Amihan and Habagat, internationally known as ________ and ________ respectively.",
           answers: [
             {
-              text: "A. Northeast and southwest",
+              text: "A.) Northeast and southwest",
               is_correct: false,
             },
             {
-              text: "B. Trade wind and easterlies",
+              text: "B.) Trade wind and easterlies",
               is_correct: false,
             },
             {
-              text: "C. Southwest and northeast",
+              text: "C.) Southwest and northeast",
               is_correct: true,
             },
             {
-              text: "D. Westerlies and easterlies",
+              text: "D.) Westerlies and easterlies",
               is_correct: false,
             },
             {
-              text: "E. North and West",
+              text: "E.) North and West",
               is_correct: false,
             },
           ],
@@ -1628,19 +1628,19 @@ export default {
           q: "58.	What is the primary function of white blood cells in the human body?",
           answers: [
             {
-              text: "A. Carrying oxygen",
+              text: "A.) Carrying oxygen",
               is_correct: false,
             },
             {
-              text: "B. Fighting infection",
+              text: "B.) Fighting infection",
               is_correct: true,
             },
             {
-              text: "C. Transmitting nerve impulses",
+              text: "C.) Transmitting nerve impulses",
               is_correct: false,
             },
             {
-              text: "D. Filtering waste products",
+              text: "D.) Filtering waste products",
               is_correct: false,
             },
            
@@ -1656,19 +1656,19 @@ export default {
           q: "59.	What is the process by which a solid change directly into a gas without becoming a liquid first?",
           answers: [
             {
-              text: "A. Evaporation",
+              text: "A.) Evaporation",
               is_correct: false,
             },
             {
-              text: "B. Condensation",
+              text: "B.) Condensation",
               is_correct: false,
             },
             {
-              text: "C. Sublimation",
+              text: "C.) Sublimation",
               is_correct: true,
             },
             {
-              text: "D. Freezing",
+              text: "D.) Freezing",
               is_correct: false,
             },
            
@@ -1685,19 +1685,19 @@ export default {
           q: "60.	Which of the following is a renewable resource?",
           answers: [
             {
-              text: "A. Wind",
+              text: "A.) Wind",
               is_correct: true,
             },
             {
-              text: "B. Natural Source",
+              text: "B.) Natural Source",
               is_correct: false,
             },
             {
-              text: "C. Coal",
+              text: "C.) Coal",
               is_correct: false,
             },
             {
-              text: "D.  Petroleum",
+              text: "D.)  Petroleum",
               is_correct: false,
             },
            
@@ -1714,19 +1714,19 @@ export default {
           q: "61. What is the complete name of the current City Mayor?",
           answers: [
             {
-              text: "A. Rey Tan Uy",
+              text: "A.) Rey Tan Uy",
               is_correct: true,
             },
             {
-              text: "B. Rey Tao Uy",
+              text: "B.) Rey Tao Uy",
               is_correct: false,
             },
             {
-              text: "C. Rey Tan Uy",
+              text: "C.) Rey Tan Uy",
               is_correct: false,
             },
             {
-              text: "D. Rey Tian Uy",
+              text: "D.) Rey Tian Uy",
               is_correct: false,
             },
            
@@ -1744,19 +1744,19 @@ export default {
           q: "62. How many barangays does Tagum City consist of?",
           answers: [
             {
-              text: "A. 25 barangays",
+              text: "A.) 25 barangays",
               is_correct: false,
             },
             {
-              text: "B. 17 barangays",
+              text: "B.) 17 barangays",
               is_correct: false,
             },
             {
-              text: "C. 19 barangays",
+              text: "C.) 19 barangays",
               is_correct: false,
             },
             {
-              text: "D. 23 barangays",
+              text: "D.) 23 barangays",
               is_correct: true,
             },
            
@@ -1774,19 +1774,19 @@ export default {
           q: "63. What is the title of Tagum City Hymn? ",
           answers: [
             {
-              text: "A. We are Tagum Hymn",
+              text: "A.) We are Tagum Hymn",
               is_correct: false,
             },
             {
-              text: "B. TAGUMpay Hymn",
+              text: "B.) TAGUMpay Hymn",
               is_correct: false,
             },
             {
-              text: "C. Tagum, Mabuhay Ka!",
+              text: "C.) Tagum, Mabuhay Ka!",
               is_correct: true,
             },
             {
-              text: "D. None of these",
+              text: "D.) None of these",
               is_correct: false,
             },
            
@@ -1803,19 +1803,19 @@ export default {
           q: "64-65. What are the two (2) examples of festivals in Tagum City which started in the year 2022.",
           answers: [
             {
-              text: "A. Pakaradjan Festival, Banana Festival",
+              text: "A.) Pakaradjan Festival, Banana Festival",
               is_correct: false,
             },
             {
-              text: "B. Bisag Asa Festival, Pinagbenga Festival",
+              text: "B.) Bisag Asa Festival, Pinagbenga Festival",
               is_correct: false,
             },
             {
-              text: "C. Musikahan Festival, Binuhat Festival",
+              text: "C.) Musikahan Festival, Binuhat Festival",
               is_correct: true,
             },
             {
-              text: "D. Musikahan Festival, Handurawan Festival",
+              text: "D.) Musikahan Festival, Handurawan Festival",
               is_correct: false,
             },
            
@@ -1850,19 +1850,19 @@ export default {
           qq: "21. Who is credited with inventing the telephone?",
           answers: [
             {
-              text: "A. Alexander Graham Bell",
+              text: "A.) Alexander Graham Bell",
               is_correct: true,
             },
             {
-              text: "B. Thomas Edison",
+              text: "B.) Thomas Edison",
               is_correct: false,
             },
             {
-              text: "C. Nikola Tesla",
+              text: "C.) Nikola Tesla",
               is_correct: false,
             },
             {
-              text: "D. Albert Einstein",
+              text: "D.) Albert Einstein",
               is_correct: false,
             },
           ],
