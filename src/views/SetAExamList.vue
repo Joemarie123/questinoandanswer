@@ -36,10 +36,10 @@
 
       <SetADisplayQuestion
      
-        v-if="questionsAnswered < questions.length"
-        :questions="questions"
+        v-if="questionsAnswered < questions.length"  :questions="questions"
         :questionsAnswered="questionsAnswered"
         @question-answered="questionAnswered"
+        :totalCorrect = "totalCorrect"
       />
 
     <!--   <result v-else :results="results" :totalCorrect="totalCorrect" /> -->
@@ -59,8 +59,8 @@
     </button>
    
    </div>
-
-    <h1>{{ totalCorrect }}</h1>
+<!-- 
+    <h1>{{ totalCorrect }}</h1> -->
 
   </div>
 </v-app>

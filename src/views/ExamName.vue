@@ -20,12 +20,23 @@
       {{ alertMessage }}
     </v-alert>
 
-            <p class="my-4 login-title">
+            <h3 class="my-4 login-title">
                
-                I'm sending the examination package for E-CESPRO. Also, I would like to include the following before they take their exam. </p>
+              Examinee Information Details </h3>
             <v-card-text>
              
+              <v-text-field
+                class="mx-2"
+                prepend-inner-icon="mdi-account"
+               density="compact" 
+               variant="outlined"
+              v-model="searchfullname"
+             label="Search Full Name"
                 
+                >
+                
+                </v-text-field>
+
               <v-text-field
                 class="mx-2"
                 prepend-inner-icon="mdi-account"
@@ -306,6 +317,7 @@
         }, 5000);
       }
 
+      
 
           this.Lastname = '';
           this.Firstname = '';
