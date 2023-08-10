@@ -30,7 +30,7 @@ const actions = {
 
   async fetchUsers({commit}){
     let res = await axios.get(`http://192.168.8.234:8080/PEESOCESPRO/view.php`);
-
+    
     commit('setUsers', res.data);
   },
 

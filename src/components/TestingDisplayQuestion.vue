@@ -14,7 +14,7 @@
         
         <div class="status">
           {{ questionsAnswered }} out of {{ questions.length }} Questions & Answer
-        <!--   Total Correct:{{ totalCorrect }} -->
+          Total Correct:{{ totalCorrect }}
         </div>
       </div>
         
@@ -174,16 +174,19 @@
 
 methods: {
       
-  ...mapActions('posts', ['fetchUsers']),
+
+  
 
       selectAnswer(answer) {
 
         if(answer == ''){
           return
         }
-        
-          this.$emit("question-answered", answer.is_correct);
-          if (this.currentQuestionIndex === 0) {
+        this.$emit("question-answered", answer.is_correct);
+    
+      
+
+        if (this.currentQuestionIndex === 0) {
         this.question_1 = answer.text;
         /* console.log("Question 1:", answer.text); */
 
@@ -768,25 +771,14 @@ methods: {
       }
       
       this.currentQuestionIndex++;
-      if(answer.is_correct == "None"){
-        this.currentQuestionIndex;
-      }
          this.answer='';
-      
-
-        },
-        
-    
-      
-
-        
+      },
 
     },
 
 
     computed:{
-      ...mapGetters('posts', {examinee: 'getPosts',
-     /*  ...mapGetters('posts', {users: 'getPosts' */
+      ...mapGetters('posts', {examinee: 'getPosts'
   }),
 
     },

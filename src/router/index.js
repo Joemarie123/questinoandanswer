@@ -41,6 +41,12 @@ const routes = [
     component: () => import('@/views/SetBExamList.vue')
   },
 
+  {
+    path: '/TestingQuestion',
+    name: 'TestingQuestion',
+    component: () => import('@/views/TestingQuestion.vue')
+  },
+
 
 ]
 

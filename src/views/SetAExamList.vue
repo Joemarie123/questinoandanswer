@@ -1237,13 +1237,32 @@ export default {
 
 
         {
+            subject:"ENGLISH",
+            direction:"Read the short story below and answer the following questions:",
+            phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
+            phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
+            phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
+            phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
+            phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
+            
+          
+            quesionunderline:'',
+            number:'',
+            q: "",
+            answers: [
+              {
+                text: "Click ",
+                is_correct: "None",
+              },
+            
+            
+            ],
+          }, 
+
+        {
           subject:"ENGLISH",
-          direction:"Read the short story below and answer the following questions:",
-          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
-          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
+        
+          
           
           /* displaydirection:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation. As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures. Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats. One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements. The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators", */
           quesionunderline:'',
@@ -1274,15 +1293,7 @@ export default {
 
         {
           subject:"ENGLISH",
-          subject:"ENGLISH",
-          direction:"Read the short story below and answer the following questions:",
-          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
-          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
-
-          direction:"Read the short story below and answer the following questions:",
+         
     
           quesionunderline:'',
           number:'',
@@ -1310,14 +1321,7 @@ export default {
 
         {
           subject:"ENGLISH",
-          subject:"ENGLISH",
-          direction:"Read the short story below and answer the following questions:",
-          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
-          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
-          direction:"Read the short story below and answer the following questions:",
+        
          
           quesionunderline:'',
           number:'',
@@ -1348,14 +1352,7 @@ export default {
         {
     
           subject:"ENGLISH",
-          direction:"Read the short story below and answer the following questions:",
-          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
-          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
-
-          direction:"Read the short story below and answer the following questions:",
+       
           
           quesionunderline:'',
           number:'',
@@ -1385,13 +1382,7 @@ export default {
         {
        
           subject:"ENGLISH",
-          direction:"Read the short story below and answer the following questions:",
-          phrase_one:"Deep in the heart of the Amazon rainforest, a team of researchers embarked on an ambitious expedition. Their goal was to study the elusive and endangered jaguars in their natural habitat. Among the team was Dr. Emily Reynolds, a renowned wildlife biologist known for her expertise in big cat conservation.",
-          phrase_tow:"As they trekked through dense foliage and navigated treacherous terrain, the team encountered numerous challenges. The unpredictable weather, dangerous wildlife, and limited resources tested their resilience and determination. Dr. Reynolds, however, remained undeterred, driven by her passion for protecting these magnificent creatures.",
-          phrase_three:"Days turned into weeks, and the team's perseverance paid off. They managed to set up camera traps strategically placed to capture glimpses of the elusive jaguars. Dr. Reynolds meticulously analyzed the footage, documenting the behavior and movements of the majestic cats.",
-          phrase_four:"One day, as the team huddled around a campfire, they heard rustling in the nearby bushes. Suddenly, a jaguar emerged from the shadows, its piercing eyes locked onto the team. Time seemed to stand still as the researchers marveled at the creature's beauty and raw power. Dr. Reynolds whispered to her team to remain calm and avoid any sudden movements",
-          phrase_five:"The jaguar prowled closer, curiosity gleaming in its eyes. Dr. Reynolds slowly raised her camera, capturing the mesmerizing moment. It was a testament to their hard work and dedication, a rare encounter with one of nature's most elusive predators.",
-          direction:"Read the short story below and answer the following questions:",
+        
     
           quesionunderline:'',
           number:'',
