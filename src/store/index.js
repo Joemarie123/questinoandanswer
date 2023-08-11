@@ -7,6 +7,7 @@ const store = createStore({
   modules: {
     posts: postsModule,
     users: usersModule,
+
    
   }
 });

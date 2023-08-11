@@ -5,11 +5,21 @@ const routes = [
  
 
   
+  
   {
     path: '/',
+    name: 'Home',
+    component: () => import('@/views/Home.vue')
+  },
+
+
+  {
+    path: '/ExamName',
     name: 'ExamName',
     component: () => import('@/views/ExamName.vue')
   },
+
+
 
 /*     
   {
@@ -19,14 +29,21 @@ const routes = [
   },
  */
 
-
-
+  
   {
-    path: '/Home',
-    name: 'Home',
-    component: () => import('@/views/Home.vue')
+    path: '/Testing',
+    name: 'Testing',
+    component: () => import('@/views/Testing.vue')
   },
 
+  {
+    path: '/Testing2',
+    name: 'Testing2',
+    component: () => import('@/views/Testing2.vue')
+  },
+
+
+  
 
   {
     path: '/SetAExamList',

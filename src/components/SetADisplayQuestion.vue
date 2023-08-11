@@ -1,6 +1,9 @@
 <template>
     <div class="questions-ctr">
       <v-card class="mx-3 mx-lg-0"  :elevation="isHovering ? 24 : 6">
+          <!-- <p><strong>EXAMINEE ID: {{ UserID }}</strong></p>
+           <p><strong>Total Correct: {{ totalCorrect }} </strong></p> --> 
+         <!--   <v-btn color="green">Save</v-btn> -->
           <p class="mx-3 my-3 " style="font-size:17px"><strong>Instructions:</strong> <span style="font-size:15px">Welcome to the Expanded-City Educational Scholarship Program (E-CESPRO) online examination for SY 2022-2023. Please carefully read and choose the correct answer for each item. The exam consists of 65 questions and one essay type. The time allocation for this exam is only 2 hours, plus an additional 30 minutes for your essay. Warning: Attempting to exit the exam interface or open other browser tabs will automatically exit your examination.</span></p>
         </v-card>
       <div class="progress mx-3 mx-lg-0">
@@ -82,6 +85,8 @@
       </transition-group>
     </v-card>
 
+  
+    <!-- <p>Submitted Value: {{ register }}</p> -->
     </div>
   </template>
   
@@ -91,6 +96,10 @@
 
 
   export default {
+    props: {
+      register: String
+  },
+
     props: ["questions", "questionsAnswered","totalCorrect"],
     emits: ["question-answered"],
     data(){
@@ -98,7 +107,7 @@
           answer:'',
      /*  text: "C. Geometric sequence", */
       
-
+   
       currentQuestionIndex: 0,
       question_1: '',
       question_2: '',
@@ -165,6 +174,7 @@
       question_63: '',
       question_64: '',
       answer:[],
+      UserID:'',
      
   };
   
@@ -769,7 +779,7 @@ methods: {
       
       this.currentQuestionIndex++;
       if(answer.is_correct == "None"){
-        this.currentQuestionIndex;
+        this.currentQuestionIndex--;
       }
          this.answer='';
       
@@ -793,8 +803,8 @@ methods: {
 
     created()
     {
-      console.log("ID NI",this.examinee.Examinee_ID)
-     
+      console.log("ID NI",localStorage.getItem('Examinee_ID'))
+     this.UserID=localStorage.getItem('Examinee_ID')
 
     }
 

@@ -42,18 +42,21 @@ const actions = {
    },
 
 
-
   async newuser ({ commit }, payload){
     console.log("im here!")
-    let res = await axios.post('http://10.0.1.23:80/PEESOCESPRO/new_user.php',payload );
+    let res = await axios.post('http://10.0.1.23/peesocespro/SetupUser.php',payload);
+console.log("res.data=",res.data)
+    if(res.data['status']=='Success')
+    return 0;
+    if(res.data['status']=='STARTED')
+    return res.data['status'];
+    if(res.data['status']=='FINISHED')
+    return res.data['status'];
     console.log("output=",res)
     commit('setPosts', res.data);
 
   }
 
-
-
-  
 
 
 }

@@ -181,6 +181,7 @@
      
     }
     },
+    
 
     computed:{
       ...mapGetters('posts', {examinee: 'getPosts'}),
@@ -223,9 +224,10 @@
 
       ...mapActions('posts', ['newuser']),
 
-    register() {
-      console.log("register");
+     register() {
+       console.log("register");
       let data = new FormData();
+      
       data.append('lastname', this.Lastname);
       data.append('firstname', this.Firstname);
       data.append('middlename', this.Middlename);
@@ -233,7 +235,8 @@
       data.append('school_intended', this.School_Intended);
       data.append('Exam_set', this.Exam_set);
       data.append('course', this.Course);
-      this.newuser(data).then(() => {
+
+      
          
 
           /* this.navigateTo('/Home'); */
@@ -241,7 +244,7 @@
          if (this.Exam_set === 'A') {
         // Replace 'FormA' with the name of the component or route to the form you want to transfer to for Set A
        /*  this.$router.push({ name: 'SetAExamList' }); */
-        this.navigateTo('/TestingQuestion');
+        this.navigateTo('/SetAExamList');
       } else if (this.Exam_set === 'B') {
         // Replace 'FormB' with the name of the component or route to the form you want to transfer to for Set B
        /*  this.$router.push({ name: 'SetBExamList' }); */
