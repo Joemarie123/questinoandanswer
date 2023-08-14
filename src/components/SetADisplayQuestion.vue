@@ -1,9 +1,25 @@
 <template>
+
     <div class="questions-ctr">
+
+     <!--  <SetAExamList/> -->
+      <v-dialog v-model="dialogforstopexam" persistent>
+        <v-container>
+        <v-card>
+        <p class="text-center mt-4">
+        Time is Up!!
+        </p>
+        <v-card-actions>
+          <v-btn color="primary" block @click="$router.push({ name: 'Home' })">Close Dialog</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+      </v-dialog>
+
       <v-card class="mx-3 mx-lg-0"  :elevation="isHovering ? 24 : 6">
           <!-- <p><strong>EXAMINEE ID: {{ UserID }}</strong></p>
-           <p><strong>Total Correct: {{ totalCorrect }} </strong></p> --> 
-         <!--   <v-btn color="green">Save</v-btn> -->
+        </p> --> 
+       <!--  <p><strong>Total Correct: {{ totalCorrect }} </strong></p> -->
           <p class="mx-3 my-3 " style="font-size:17px"><strong>Instructions:</strong> <span style="font-size:15px">Welcome to the Expanded-City Educational Scholarship Program (E-CESPRO) online examination for SY 2022-2023. Please carefully read and choose the correct answer for each item. The exam consists of 65 questions and one essay type. The time allocation for this exam is only 2 hours, plus an additional 30 minutes for your essay. Warning: Attempting to exit the exam interface or open other browser tabs will automatically exit your examination.</span></p>
         </v-card>
       <div class="progress mx-3 mx-lg-0">
@@ -17,7 +33,7 @@
         
         <div class="status">
           {{ questionsAnswered }} out of {{ questions.length }} Questions & Answer
-        <!--   Total Correct:{{ totalCorrect }} -->
+       
         </div>
       </div>
         
@@ -56,18 +72,15 @@
             </div> -->
 
             <v-radio-group v-model="answer">
-              <v-radio
-        v-for="answer in question.answers"
-        :key="answer.text"
-        :label="answer.text"
-        :value="answer"
-      ></v-radio>
+              <v-radio v-for="answer in question.answers" :key="answer.text"
+                 :label="answer.text" :value="answer"
+                ></v-radio>
       
             </v-radio-group>
             <v-btn color="green" @click="selectAnswer(answer)">SUBMIT</v-btn>
           </div>
 
-          
+        <!--   Total Correct:{{ totalCorrect }} -->
         </div> 
 
       <!--   <div>
@@ -85,28 +98,42 @@
       </transition-group>
     </v-card>
 
-  
+   <!--  <div v-if="questionsAnswered === questions.length">
+      <h1>AKo nagud ni</h1>
+    </div>
+   -->
     <!-- <p>Submitted Value: {{ register }}</p> -->
     </div>
+   <!--  <v-btn color="green" @click="saveall()">Save</v-btn> -->
   </template>
   
   <script>
 
+/* import SetAExamList from "../views/SetAExamList.vue"; */
   import  { mapActions, mapGetters} from "vuex";
 
 
   export default {
+   
+
+
     props: {
       register: String
   },
+  components: {
+  
+   
+    /* Result, */
+  },
 
     props: ["questions", "questionsAnswered","totalCorrect"],
-    emits: ["question-answered"],
+    emits: ["question-answered","plusone","englishtrap"],
     data(){
         return{
           answer:'',
      /*  text: "C. Geometric sequence", */
-      
+     dialogforstopexam:false,
+
    
       currentQuestionIndex: 0,
       question_1: '',
@@ -173,9 +200,76 @@
       question_62: '',
       question_63: '',
       question_64: '',
+
+
+   separate_1: '',
+  separate_2: '',
+      separate_3: '',
+      separate_4: '',
+     separate_5: '',
+      separate_6: '',
+     separate_7: '',
+    separate_8: '',
+      separate_9: '',
+       separate_10: '',
+       separate_11: '',
+       separate_12: '',
+      separate_13: '',
+      separate_14: '',
+      separate_15: '',
+     separate_16: '',
+       separate_17: '',
+      separate_18: '',
+      separate_19: '',
+       separate_20: '',
+      separate_21: '',
+       separate_22: '',
+       separate_23: '',
+     separate_24: '',
+      separate_25: '',
+     separate_26: '',
+     separate_27: '',
+    separate_28: '',
+     separate_29: '',
+    separate_30: '',
+   separate_31: '',
+     separate_32: '',
+    separate_33: '',
+    separate_34: '',
+      separate_35: '',
+      separate_36: '',
+      separate_37: '',
+      separate_38: '',
+      separate_39: '',
+     separate_40: '',
+      separate_41: '',
+       separate_42: '',
+      separate_43: '',
+      separate_44: '',
+      separate_45: '',
+    separate_46: '',
+     separate_47: '',
+      separate_48: '',
+       separate_49: '',
+       separate_50: '',
+       separate_51: '',
+        separate_52: '',
+       separate_53: '',
+       separate_54: '',
+       separate_55: '',
+       separate_56: '',
+       separate_57: '',
+       separate_58: '',
+       separate_59: '',
+       separate_60: '',
+       separate_61: '',
+       separate_62: '',
+       separate_63: '',
+       separate_64 : '',
+
       answer:[],
       UserID:'',
-     
+     finalscore:''
   };
   
 },
@@ -185,15 +279,24 @@
 methods: {
       
   ...mapActions('posts', ['fetchUsers']),
+  ...mapActions('posts', ['AddExam']),
+  ...mapActions('posts', ['StopExam']),
+  
 
       selectAnswer(answer) {
-
+        
+console.log("score=",this.totalCorrect)
         if(answer == ''){
           return
         }
-        
+        if(answer.is_correct!="None"){
           this.$emit("question-answered", answer.is_correct);
+        }else{
+this.$emit("englishtrap");
+        }
+          
           if (this.currentQuestionIndex === 0) {
+           
         this.question_1 = answer.text;
         /* console.log("Question 1:", answer.text); */
 
@@ -765,10 +868,20 @@ methods: {
       if (parts.length === 2) {
       this.separate_63 = parts[0] + '';
         }
-        console.log("Question 5:",  this.separate_63);
+        console.log("Question 63:",  this.separate_63);
       }
       
       else if (this.currentQuestionIndex === 63) {
+     /*    if(answer.is_correct){
+              
+              this.$emit("plusone",answer.is_correct);
+              
+            } */
+        if(answer.is_correct){
+          this.finalscore=this.totalCorrect + 2
+        }else{
+          this.finalscore=this.totalCorrect
+        }
         this.question_64 = answer.text;
         const parts = this.answer.text.split('.)');
       if (parts.length === 2) {
@@ -783,12 +896,178 @@ methods: {
       }
          this.answer='';
       
+      /*    if(questionsAnswered == questions.length){
+
+          this.saveall();
+
+         } */
+  /*  console.log("Sample",this.questionsAnswered.length)  */
+/* console.log("questions",this.questions.length)  */
+/* console.log("questions", this.questions.length - 1); */
+
+this.StopExam().then(e=>{
+            
+                if (e == 1) {
+                  console.log("stop all")
+                  let data = new FormData();  
+      data.append('Examinee_ID', this.UserID);
+      data.append('Question1', this.separate_1);
+      data.append('Question2', this.separate_2);
+      data.append('Question3', this.separate_3);
+      data.append('Question4', this.separate_4);
+      data.append('Question5', this.separate_5);
+       data.append('Question6', this.separate_6);
+       data.append('Question7', this.separate_7);
+       data.append('Question8', this.separate_8);
+       data.append('Question9', this.separate_9);
+       data.append('Question10', this.separate_10);
+       data.append('Question11', this.separate_11);
+       data.append('Question12', this.separate_12);
+       data.append('Question13', this.separate_13);
+       data.append('Question14', this.separate_14);
+       data.append('Question15', this.separate_15);
+       data.append('Question16', this.separate_16);
+       data.append('Question17', this.separate_17);
+       data.append('Question18', this.separate_18);
+       data.append('Question19', this.separate_19);
+       data.append('Question20', this.separate_20);
+       data.append('Question21', this.separate_21);
+       data.append('Question22', this.separate_22);
+       data.append('Question23', this.separate_23);
+       data.append('Question24', this.separate_24);
+       data.append('Question25', this.separate_25);
+       data.append('Question26', this.separate_26);
+       data.append('Question27', this.separate_27);
+       data.append('Question28', this.separate_28);
+       data.append('Question29', this.separate_29);
+       data.append('Question30', this.separate_30);
+       data.append('Question31', this.separate_31);
+       data.append('Question32', this.separate_32);
+       data.append('Question33', this.separate_33);
+       data.append('Question34', this.separate_34);
+       data.append('Question35', this.separate_35);
+       data.append('Question36', this.separate_36);
+       data.append('Question37', this.separate_37);
+       data.append('Question38', this.separate_38);
+       data.append('Question39', this.separate_39);
+       data.append('Question40', this.separate_40);
+       data.append('Question41', this.separate_41);
+       data.append('Question42', this.separate_42);
+       data.append('Question43', this.separate_43);
+       data.append('Question44', this.separate_44);
+       data.append('Question45', this.separate_45);
+       data.append('Question46', this.separate_46);
+       data.append('Question47', this.separate_47);
+       data.append('Question48', this.separate_48);
+       data.append('Question49', this.separate_49);
+       data.append('Question50', this.separate_50);
+       data.append('Question51', this.separate_51);
+       data.append('Question52', this.separate_52);
+       data.append('Question53', this.separate_53);
+       data.append('Question54', this.separate_54);
+       data.append('Question55', this.separate_55);
+       data.append('Question56', this.separate_56);
+       data.append('Question57', this.separate_57);
+       data.append('Question58', this.separate_58);
+       data.append('Question59', this.separate_59);
+       data.append('Question60', this.separate_60);
+       data.append('Question61', this.separate_61);
+       data.append('Question62', this.separate_62);
+       data.append('Question63', this.separate_63);
+       data.append('Question64', this.separate_64);
+       data.append('score', this.finalscore);
+       this.AddExam(data);
+       this.dialogforstopexam = true;           
+                }else{
+                  console.log("continue")
+                }
+            }).catch(e => console.log("Error =>", e));
+
+
+
+         if(this.questionsAnswered === this.questions.length - 1){
+
+          console.log("register");
+      let data = new FormData();  
+      data.append('Examinee_ID', this.UserID);
+      data.append('Question1', this.separate_1);
+      data.append('Question2', this.separate_2);
+      data.append('Question3', this.separate_3);
+      data.append('Question4', this.separate_4);
+      data.append('Question5', this.separate_5);
+       data.append('Question6', this.separate_6);
+       data.append('Question7', this.separate_7);
+       data.append('Question8', this.separate_8);
+       data.append('Question9', this.separate_9);
+       data.append('Question10', this.separate_10);
+       data.append('Question11', this.separate_11);
+       data.append('Question12', this.separate_12);
+       data.append('Question13', this.separate_13);
+       data.append('Question14', this.separate_14);
+       data.append('Question15', this.separate_15);
+       data.append('Question16', this.separate_16);
+       data.append('Question17', this.separate_17);
+       data.append('Question18', this.separate_18);
+       data.append('Question19', this.separate_19);
+       data.append('Question20', this.separate_20);
+       data.append('Question21', this.separate_21);
+       data.append('Question22', this.separate_22);
+       data.append('Question23', this.separate_23);
+       data.append('Question24', this.separate_24);
+       data.append('Question25', this.separate_25);
+       data.append('Question26', this.separate_26);
+       data.append('Question27', this.separate_27);
+       data.append('Question28', this.separate_28);
+       data.append('Question29', this.separate_29);
+       data.append('Question30', this.separate_30);
+       data.append('Question31', this.separate_31);
+       data.append('Question32', this.separate_32);
+       data.append('Question33', this.separate_33);
+       data.append('Question34', this.separate_34);
+       data.append('Question35', this.separate_35);
+       data.append('Question36', this.separate_36);
+       data.append('Question37', this.separate_37);
+       data.append('Question38', this.separate_38);
+       data.append('Question39', this.separate_39);
+       data.append('Question40', this.separate_40);
+       data.append('Question41', this.separate_41);
+       data.append('Question42', this.separate_42);
+       data.append('Question43', this.separate_43);
+       data.append('Question44', this.separate_44);
+       data.append('Question45', this.separate_45);
+       data.append('Question46', this.separate_46);
+       data.append('Question47', this.separate_47);
+       data.append('Question48', this.separate_48);
+       data.append('Question49', this.separate_49);
+       data.append('Question50', this.separate_50);
+       data.append('Question51', this.separate_51);
+       data.append('Question52', this.separate_52);
+       data.append('Question53', this.separate_53);
+       data.append('Question54', this.separate_54);
+       data.append('Question55', this.separate_55);
+       data.append('Question56', this.separate_56);
+       data.append('Question57', this.separate_57);
+       data.append('Question58', this.separate_58);
+       data.append('Question59', this.separate_59);
+       data.append('Question60', this.separate_60);
+       data.append('Question61', this.separate_61);
+       data.append('Question62', this.separate_62);
+       data.append('Question63', this.separate_63);
+       data.append('Question64', this.separate_64);
+       data.append('score', this.finalscore);
+       this.AddExam(data);
+      setTimeout(() => {
+          this.loading = false;
+      }, 2000)
+
+         }
+
+  
 
         },
         
     
-      
-
+   
         
 
     },
@@ -808,6 +1087,7 @@ methods: {
 
     }
 
+    
    /*  async created() {
       console.log("Total Correct:", this.totalCorrect);
   }, */

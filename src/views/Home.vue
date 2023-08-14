@@ -18,11 +18,21 @@
           <v-alert  v-if="alertMessage" :value="true" type="success" transition="scale-transition">
               ALREADY {{ alertMessage }}
     </v-alert>
-          <h3 class="my-4 login-title">
+          <h3 v-if="!isLoading" class="my-4 login-title">
                
                Examinee Information Details </h3>
                <v-card-text>
-
+              
+                
+              
+                <div v-if="isLoading" class="loading-progress-bar my-10 "  >
+             
+      <div class="loading-progress " :style="{ width: loadingProgress + '%' }">
+      
+      </div>
+      
+      <div class="loading-text">Please Wait...</div>
+    </div>
         <v-combobox
         prepend-inner-icon="mdi-account"
         class="mx-2"
@@ -31,15 +41,16 @@
           v-model="selectedFullName"
           :items="fullNames"
           label="Select a Full Name"
+          v-if="!isLoading"
         ></v-combobox>
 
      <!--    <v-text-field v-model="selectedId" label="ID" readonly></v-text-field> -->
-         <p style="font-size:18px" class="mx-3 my-2"><strong>Last Name: </strong><span style="font-size:16px" > {{ selectedLastName }} </span></p>
-         <p  style="font-size:18px" class="mx-3 my-2"><strong>First Name:</strong> <span style="font-size:16px" > {{ selectedFirstName }} </span></p>
-         <p style="font-size:18px" class="mx-3 my-2"><strong>Middle Name: </strong> <span style="font-size:16px"> {{ selectedMiddleName }} </span></p>
-         <p style="font-size:18px" class="mx-3 my-2"><strong>Barangay: </strong> <span  style="font-size:16px"> {{ selectedBarangay }} </span></p>
-         <p style="font-size:18px"  class="mx-3 my-2"><strong>Course: </strong> <span style="font-size:16px"> {{ selectedCourse }} </span></p>
-         <p style="font-size:18px" class="mx-3 my-2"><strong>Year Level:</strong> <span style="font-size:16px"> {{ selectedYearLevel }} </span></p>
+         <p  v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>Last Name: </strong><span style="font-size:16px" > {{ selectedLastName }} </span></p>
+         <p  v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>First Name:</strong> <span style="font-size:16px" > {{ selectedFirstName }} </span></p>
+         <p v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>Middle Name: </strong> <span style="font-size:16px"> {{ selectedMiddleName }} </span></p>
+         <p v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>Barangay: </strong> <span  style="font-size:16px"> {{ selectedBarangay }} </span></p>
+         <p v-if="!isLoading" style="font-size:18px"  class="mx-3 my-2"><strong>Course: </strong> <span style="font-size:16px"> {{ selectedCourse }} </span></p>
+         <p  v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>Year Level:</strong> <span style="font-size:16px"> {{ selectedYearLevel }} </span></p>
     
      <!--     <v-text-field prepend-inner-icon="mdi-account" class="mx-2"  density="compact"  variant="outlined" v-model="selectedExamSet" label="Exam Set" readonly></v-text-field> -->
       <!--   <v-text-field prepend-inner-icon="mdi-account" class="mx-2"  density="compact"  readonly variant="outlined" v-model="selectedFirstName" label="First Name"></v-text-field>
@@ -52,7 +63,7 @@
 
         <v-row class="my-3">
                     <v-col cols="12">
-                <v-btn type="submit"  color="primary" @click="register()"  class="ml-2 ">
+                <v-btn v-if="!isLoading" type="submit"  color="primary" @click="register()"  class="ml-2 ">
                   SUBMIT
                 </v-btn>
             </v-col>
@@ -76,6 +87,8 @@ import { mapGetters,mapActions } from 'vuex';
 export default {
   data() {
     return {
+      isLoading: false,
+      loadingProgress: 0,
       alertMessage:'',
       selectedFullName: '',
       selectedId: '',
@@ -97,15 +110,38 @@ export default {
 },
 created(){
   this.fetchUsers()
-  setTimeout(() => {
+ /*  setTimeout(() => {
     this.fetchFullNames()
-  }, 1000);
+  }, 1000); */
+  this.simulateLoading(() => {
+    this.fetchFullNames()
+  }, 3000);
+
   
 },
   methods: {
     ...mapActions('posts', ['fetchUsers']),
     ...mapActions('posts', ['newuser']),
    
+    simulateLoading() {
+      const interval = 20; // Change this to control the speed of loading
+      const totalSteps = 50; // Adjust this based on the total number of steps you want
+      let currentStep = 0;
+
+      this.isLoading = true;
+
+      const loadingInterval = setInterval(() => {
+        currentStep++;
+        this.loadingProgress = (currentStep / totalSteps) * 100;
+
+        if (currentStep >= totalSteps) {
+          clearInterval(loadingInterval);
+          this.isLoading = false;
+          this.loadingProgress = 0;
+          this.fetchFullNames();
+        }
+      }, interval);
+    },
     
     async register() {
       /* let data = new FormData();
@@ -123,18 +159,20 @@ created(){
                 }else{
                   console.log("examset=",this.selectedExamSet);
                   localStorage.setItem('Examinee_ID',this.selectedId);
-      console.log("Localstorage=",localStorage.Examinee_ID);
-      this.navigateTo('/SetAExamList');
+               console.log("Localstorage=",localStorage.Examinee_ID);
+
+
+    /*   this.navigateTo('/SetAExamList'); */
            /* this.navigateTo('/Home'); */
          /*  this.submitForm() */
          if (this.selectedExamSet === 'A') {
         // Replace 'FormA' with the name of the component or route to the form you want to transfer to for Set A
-       /*  this.$router.push({ name: 'SetAExamList' }); */
+        this.$router.push({ name: 'SetAExamList' });
         this.navigateTo('/SetAExamList');
       } else if (this.selectedExamSet === 'B') {
         // Replace 'FormB' with the name of the component or route to the form you want to transfer to for Set B
        /*  this.$router.push({ name: 'SetBExamList' }); */
-       /*  this.navigateTo('/SetBExamList'); */
+        this.navigateTo('/SetBExamList');
       }
 
       this.$emit('submit', this.selectedId);
@@ -238,7 +276,23 @@ created(){
 </script>
 
 <style scoped>
-  
+  .loading-progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+}
+
+.loading-text {
+  position: absolute;
+  font-size: 16px;
+  color: #333;
+}
+
+.loading-progress {
+  height: 100%;
+  background-color: #3498db;
+  transition: width 0.2s ease-in-out;
+}
 .login-form {
   max-width: 100%;
   margin: 0 auto;

@@ -227,7 +227,6 @@
      register() {
        console.log("register");
       let data = new FormData();
-      
       data.append('lastname', this.Lastname);
       data.append('firstname', this.Firstname);
       data.append('middlename', this.Middlename);
@@ -235,8 +234,7 @@
       data.append('school_intended', this.School_Intended);
       data.append('Exam_set', this.Exam_set);
       data.append('course', this.Course);
-
-      
+      this.AddExam()
          
 
           /* this.navigateTo('/Home'); */
@@ -269,7 +267,7 @@
 
 
 
-        }).catch(e => console.log(e.message));
+      //  }).catch(e => console.log(e.message));
     },
     navigateTo(path) {
       this.$router.push({ 'path': path });
