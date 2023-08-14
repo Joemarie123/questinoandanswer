@@ -94,6 +94,7 @@
 import { mapGetters,mapActions } from 'vuex';
 
 export default {
+  
   data() {
     return {
       isLoading: false,
@@ -113,18 +114,22 @@ export default {
       namesData: [], // Array to store names data
     };
   },
+
+
   computed:{
       ...mapGetters('posts', {examinee: 'getPosts'}),
 
 },
 created(){
+  // this.isLoading=true
   this.fetchUsers()
+  // .then((e)=>{this.isLoading=false}).catch((e)=>{console.log(e)})
  /*  setTimeout(() => {
     this.fetchFullNames()
   }, 1000); */
   this.simulateLoading(() => {
     this.fetchFullNames()
-  }, 3000);
+  }, );
 
   
 },
@@ -144,10 +149,15 @@ created(){
         this.loadingProgress = (currentStep / totalSteps) * 100;
 
         if (currentStep >= totalSteps) {
-          clearInterval(loadingInterval);
+          if(this.examinee.length >0){
+            clearInterval(loadingInterval);
           this.isLoading = false;
           this.loadingProgress = 0;
           this.fetchFullNames();
+          }else{
+            currentStep=0
+          }
+          
         }
       }, interval);
     },
@@ -307,6 +317,7 @@ created(){
   background-color: rgba(1, 36, 20, 0.356);
   color: white;
 } */
+
 
   .loading-progress-bar {
   width: 100%;

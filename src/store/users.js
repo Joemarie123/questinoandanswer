@@ -32,6 +32,7 @@ const actions = {
     let res = await axios.get(`http://10.0.1.23/PEESOCESPRO/view.php`);
     
     commit('setUsers', res.data);
+    
   },
 
 

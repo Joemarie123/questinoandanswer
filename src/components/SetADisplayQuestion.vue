@@ -909,6 +909,12 @@ this.StopExam().then(e=>{
             
                 if (e == 1) {
                   console.log("stop all")
+                  if(answer.question_1){
+                    this.finalscore=this.totalCorrect+1
+
+                  }else{
+                    this.finalscore=this.totalCorrect
+                  }
                   let data = new FormData();  
       data.append('Examinee_ID', this.UserID);
       data.append('Question1', this.separate_1);
