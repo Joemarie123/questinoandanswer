@@ -74,7 +74,7 @@
 
   
 
-   <!--  <h1>{{ totalCorrect }}</h1> -->
+<!--     <h1>{{ totalCorrect }}</h1> -->
 
   </div>
 </v-app>
@@ -1724,11 +1724,11 @@ export default {
           answers: [
             {
               text: "A.) Rey Tan Uy",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "B.) Rey Tao Uy",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "C.) Rey Tan Uy",

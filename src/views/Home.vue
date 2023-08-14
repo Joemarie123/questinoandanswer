@@ -15,12 +15,12 @@
           :class="`elevation-${isHovering ? 24 : 6}`"
           class=" login-form " >
 
-          <v-alert  v-if="alertMessage" :value="true" type="success" transition="scale-transition">
+          <v-alert  v-if="alertMessage"  :value="true" type="success" transition="fade-transition">
               ALREADY {{ alertMessage }}
     </v-alert>
-          <h3 v-if="!isLoading" class="my-4 login-title">
+    <h4 v-if="!isLoading" class="my-2 mt-4 login-title">
                
-               Examinee Information Details </h3>
+               WELCOME TO E-CESPRO EXAM</h4>
                <v-card-text>
               
                 
@@ -45,13 +45,18 @@
         ></v-combobox>
 
      <!--    <v-text-field v-model="selectedId" label="ID" readonly></v-text-field> -->
-         <p  v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>Last Name: </strong><span style="font-size:16px" > {{ selectedLastName }} </span></p>
-         <p  v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>First Name:</strong> <span style="font-size:16px" > {{ selectedFirstName }} </span></p>
-         <p v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>Middle Name: </strong> <span style="font-size:16px"> {{ selectedMiddleName }} </span></p>
-         <p v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>Barangay: </strong> <span  style="font-size:16px"> {{ selectedBarangay }} </span></p>
-         <p v-if="!isLoading" style="font-size:18px"  class="mx-3 my-2"><strong>Course: </strong> <span style="font-size:16px"> {{ selectedCourse }} </span></p>
-         <p  v-if="!isLoading" style="font-size:18px" class="mx-3 my-2"><strong>Year Level:</strong> <span style="font-size:16px"> {{ selectedYearLevel }} </span></p>
-    
+     <h4 v-if="!isLoading" class="my-2 login-title">
+               
+               Examinee Information Details </h4>
+      <v-card class="green-card mx-2">
+       
+         <p  v-if="!isLoading" style="font-size:15px" class="mx-3 my-2"><strong>Last Name: </strong><span style="font-size:13px" > {{ selectedLastName }} </span></p>
+         <p  v-if="!isLoading" style="font-size:15px" class="mx-3 my-2"><strong>First Name:</strong> <span style="font-size:13px" > {{ selectedFirstName }} </span></p>
+         <p v-if="!isLoading" style="font-size:15px" class="mx-3 my-2"><strong>Middle Name: </strong> <span style="font-size:13px"> {{ selectedMiddleName }} </span></p>
+         <p v-if="!isLoading" style="font-size:15px" class="mx-3 my-2"><strong>Barangay: </strong> <span  style="font-size:13px"> {{ selectedBarangay }} </span></p>
+         <p v-if="!isLoading" style="font-size:15px"  class="mx-3 my-2"><strong>Course: </strong> <span style="font-size:13px"> {{ selectedCourse }} </span></p>
+         <p  v-if="!isLoading" style="font-size:15px" class="mx-3 my-2"><strong>Year Level:</strong> <span style="font-size:13px"> {{ selectedYearLevel }} </span></p>
+      </v-card>
      <!--     <v-text-field prepend-inner-icon="mdi-account" class="mx-2"  density="compact"  variant="outlined" v-model="selectedExamSet" label="Exam Set" readonly></v-text-field> -->
       <!--   <v-text-field prepend-inner-icon="mdi-account" class="mx-2"  density="compact"  readonly variant="outlined" v-model="selectedFirstName" label="First Name"></v-text-field>
         <v-text-field prepend-inner-icon="mdi-account" class="mx-2"  density="compact"  readonly variant="outlined" v-model="selectedMiddleName" label="Middle Name"></v-text-field>
@@ -61,11 +66,15 @@
        
         <v-text-field prepend-inner-icon="mdi-account" class="mx-2"  density="compact"  variant="outlined" v-model="selectedYearLevel" label="Year Level" readonly></v-text-field> -->
 
-        <v-row class="my-3">
+        <v-row class="my-3 ml-0">
                     <v-col cols="12">
-                <v-btn v-if="!isLoading" type="submit"  color="primary" @click="register()"  class="ml-2 ">
+                <!-- <v-btn v-if="!isLoading" type="submit"    @click="register()"  class="submitbotton ml-2 ">
                   SUBMIT
-                </v-btn>
+                </v-btn> -->
+                <v-btn v-if="!isLoading"   type="submit"  @click="register()" outlined color="green darken-3">
+                <v-icon left>mdi-account-check</v-icon>
+                  SUBMIT
+              </v-btn>
             </v-col>
             
             </v-row>
@@ -142,6 +151,12 @@ created(){
         }
       }, interval);
     },
+
+    hideAlertAfterDelay() {
+      setTimeout(() => {
+        this.alertMessage = false;
+      }, 2000); // 3000 milliseconds = 3 seconds
+    },
     
     async register() {
       /* let data = new FormData();
@@ -154,6 +169,7 @@ created(){
                 if (e != 0) {
                   console.log("sulod sa output=",e);
                     this.alertMessage=e;
+                    this.hideAlertAfterDelay();
                     return;
                
                 }else{
@@ -276,6 +292,22 @@ created(){
 </script>
 
 <style scoped>
+ .submitbotton{
+  color: white;
+  background-color: rgba(15, 83, 15, 0);
+ }
+
+.fade-transition-enter-active, .fade-transition-leave-active {
+  transition: opacity 1s;
+}
+.fade-transition-enter, .fade-transition-leave-to {
+  opacity: 0;
+}
+/* .green-card {
+  background-color: rgba(1, 36, 20, 0.356);
+  color: white;
+} */
+
   .loading-progress-bar {
   width: 100%;
   height: 10px;
