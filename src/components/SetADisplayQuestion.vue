@@ -909,7 +909,7 @@ this.StopExam().then(e=>{
             
                 if (e == 1) {
                   console.log("stop all")
-                  if(answer.question_1){
+                  if(answer.is_correct){
                     this.finalscore=this.totalCorrect+1
 
                   }else{
